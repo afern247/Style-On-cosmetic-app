@@ -365,10 +365,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bie-Tb-Evg"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="QIb-M6-wBC" id="8Md-uI-5sh"/>
+                        <outlet property="errorLabel" destination="1Sy-tf-e7i" id="uGT-fS-vhH"/>
+                        <outlet property="loginButtonRounded" destination="DqS-rc-Oj8" id="kLr-YY-XqZ"/>
+                        <outlet property="passwordTextField" destination="n3t-fW-gT5" id="hOo-l6-bJZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DeJ-DA-Pmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2551" y="494"/>
+            <point key="canvasLocation" x="2550.7246376811595" y="493.52678571428567"/>
         </scene>
         <!--Login Styler View Controller-->
         <scene sceneID="xuB-kb-hsF">
