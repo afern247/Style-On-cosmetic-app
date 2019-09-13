@@ -1,0 +1,6 @@
+framework module Pods_StyleOn {
+  umbrella header "Pods-StyleOn-umbrella.h"
+
+  export *
+  module * { export * }
+}
