@@ -1,6 +1,8 @@
 # Style-On cosmetic app
 
-https://dev.azure.com/Style-On-Cosmetic/064c1ea7-4f16-4cda-b683-09e76d0a15cd/af70bd85-e80b-4690-adaf-ab716182973e/_apis/work/boardbadge/e00b944d-753a-4811-b04d-b364ae69c25d?columnOptions=1
+
+
+![](https://dev.azure.com/Style-On-Cosmetic/064c1ea7-4f16-4cda-b683-09e76d0a15cd/af70bd85-e80b-4690-adaf-ab716182973e/_apis/work/boardbadge/e00b944d-753a-4811-b04d-b364ae69c25d?columnOptions=1)
 
 This service will make contacting professional make-up artists, hair
 stylists, and barbers much easier and accessible at the users’ fingertips. This innovative app will
