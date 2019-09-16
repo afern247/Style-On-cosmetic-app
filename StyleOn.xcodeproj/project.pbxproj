@@ -116,6 +116,7 @@
 		CCD95E842329A83000CD9FC4 /* StyleOn */ = {
 			isa = PBXGroup;
 			children = (
+				CCD95EB9232C183F00CD9FC4 /* Media */,
 				CCD95EAF2329AAAE00CD9FC4 /* ViewControllers */,
 				CCD95E852329A83000CD9FC4 /* AppDelegate.swift */,
 				CCD95E892329A83000CD9FC4 /* Main.storyboard */,
@@ -157,6 +158,13 @@
 				CCD95EB7232BDF3000CD9FC4 /* constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CCD95EB9232C183F00CD9FC4 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 		FAAB8C6B94518E627F978A33 /* Frameworks */ = {
