@@ -22,6 +22,7 @@
 		CCD95EB3232B300E00CD9FC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCD95EB2232B300D00CD9FC4 /* GoogleService-Info.plist */; };
 		CCD95EB5232BCF5600CD9FC4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD95EB4232BCF5500CD9FC4 /* Utilities.swift */; };
 		CCD95EB8232BDF3000CD9FC4 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD95EB7232BDF3000CD9FC4 /* constants.swift */; };
+		CCD95EEB23317C7E00CD9FC4 /* AppointmentsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCD95EE923317C7E00CD9FC4 /* AppointmentsModel.xcdatamodeld */; };
 		FE17A0A6B343AF24602FFFD5 /* Pods_StyleOnTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25847D1BE64626DEDEC132C9 /* Pods_StyleOnTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		CCD95EB2232B300D00CD9FC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CCD95EB4232BCF5500CD9FC4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		CCD95EB7232BDF3000CD9FC4 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		CCD95EEA23317C7E00CD9FC4 /* AppointmentsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppointmentsModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				CCD95E8E2329A83200CD9FC4 /* LaunchScreen.storyboard */,
 				CCD95EB2232B300D00CD9FC4 /* GoogleService-Info.plist */,
 				CCD95E912329A83200CD9FC4 /* Info.plist */,
+				CCD95EE923317C7E00CD9FC4 /* AppointmentsModel.xcdatamodeld */,
 			);
 			path = StyleOn;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				CCD95EAE2329AA8400CD9FC4 /* SalonViewController.swift in Sources */,
 				CCD95E862329A83000CD9FC4 /* AppDelegate.swift in Sources */,
 				CCD95EAA2329AA3500CD9FC4 /* LoginUserViewController.swift in Sources */,
+				CCD95EEB23317C7E00CD9FC4 /* AppointmentsModel.xcdatamodeld in Sources */,
 				CCD95EB5232BCF5600CD9FC4 /* Utilities.swift in Sources */,
 				CCD95EAC2329AA5A00CD9FC4 /* LoginStylerViewController.swift in Sources */,
 			);
@@ -647,6 +651,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CCD95EE923317C7E00CD9FC4 /* AppointmentsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CCD95EEA23317C7E00CD9FC4 /* AppointmentsModel.xcdatamodel */,
+			);
+			currentVersion = CCD95EEA23317C7E00CD9FC4 /* AppointmentsModel.xcdatamodel */;
+			path = AppointmentsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CCD95E7A2329A83000CD9FC4 /* Project object */;
 }
