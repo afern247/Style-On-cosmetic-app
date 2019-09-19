@@ -15,3 +15,4 @@ a thorough background check. Lastly but certainly not least, this app lets you c
 who are closest to you; therefore, you will receive service quickly and efficiently.
 
 DevOps: https://dev.azure.com/Style-On-Cosmetic/
+Database: https://console.firebase.google.com/u/1/project/styleon/overview
