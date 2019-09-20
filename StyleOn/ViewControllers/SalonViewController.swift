@@ -10,15 +10,27 @@ import UIKit
 
 class SalonViewController: UIViewController {
 
+    @IBOutlet var userIconButton: UIButton!
+    @IBOutlet var bookingIconButton: UIButton!
+    @IBOutlet var servicesIconButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        
+        navButtons()
     }
     
-
+    func navButtons() {
+        
+        // Hide the error label
+        
+        // Style the elements
+        Utilities.navBookingButton(bookingIconButton)
+        Utilities.navUserButton(userIconButton)
+        Utilities.navServiceButton(servicesIconButton)
+        
+    }
     /*
     // MARK: - Navigation
 

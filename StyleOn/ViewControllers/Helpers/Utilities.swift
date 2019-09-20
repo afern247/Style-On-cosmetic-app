@@ -14,6 +14,30 @@ import UIKit
 
 class Utilities {
     
+    
+    static func navUserButton(_ button:UIButton) {
+        
+        button.layer.cornerRadius = button.frame.size.width/2
+        button.backgroundColor = UIColor.init(red: 0/255, green: 194/255, blue: 189/255, alpha: 1)
+        button.setAttributedTitle(nil, for: .normal)
+    }
+    
+    
+    static func navBookingButton(_ button:UIButton) {
+        
+        // Hollow rounded corner style
+        button.layer.cornerRadius = button.frame.size.width/2
+        button.backgroundColor = UIColor.init(red: 0/255, green: 194/255, blue: 189/255, alpha: 1)
+        button.setAttributedTitle(nil, for: .normal)
+    }
+    
+    static func navServiceButton(_ button:UIButton) {
+        
+        button.layer.cornerRadius = button.frame.size.width/2
+        button.backgroundColor = UIColor.init(red: 0/255, green: 194/255, blue: 189/255, alpha: 1)
+        button.setAttributedTitle(nil, for: .normal)
+    }
+    
     static func styleTextField(_ textfield:UITextField) {
         
         // Create the bottom line

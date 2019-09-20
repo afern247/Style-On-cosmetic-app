@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         self.ProRoundedButton.layer.borderWidth = 1.0
         self.ProRoundedButton.layer.borderColor = UIColor.white.cgColor
         
-        self.ProRegisterRoundedButton.layer.cornerRadius = 20.0
+        self.ProRegisterRoundedButton.layer.cornerRadius = 20.0 
         self.ProRegisterRoundedButton.layer.borderWidth = 1.0
         self.ProRegisterRoundedButton.layer.borderColor = UIColor.white.cgColor
         
