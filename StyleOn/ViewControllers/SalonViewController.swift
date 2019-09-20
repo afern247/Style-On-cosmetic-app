@@ -1,3 +1,11 @@
+//
+//  SalonViewController.swift
+//  StyleOn
+//
+//  Created by Ramses Machado on 9/11/19.
+//  Copyright © 2019 Ramses Machado. All rights reserved.
+//
+
 import UIKit
 
 class SalonViewController: UIViewController {
@@ -5,18 +13,12 @@ class SalonViewController: UIViewController {
     @IBOutlet var userIconButton: UIButton!
     @IBOutlet var bookingIconButton: UIButton!
     @IBOutlet var servicesIconButton: UIButton!
-    @IBOutlet weak var topMenuView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // background
-        setBackground()
+        // Do any additional setup after loading the view.
         
-        // lower nav-bar icons
         navButtons()
-        
-        seachBar()
-        
     }
     
     func navButtons() {
@@ -29,27 +31,6 @@ class SalonViewController: UIViewController {
         Utilities.navServiceButton(servicesIconButton)
         
     }
-    
-    // Func used to set the gradient
-    func setBackground(){
-        
-    }
-    
-    //  Seach buttom
-    func seachBar(){
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /*
     // MARK: - Navigation
 
