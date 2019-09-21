@@ -261,6 +261,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="SignUpTapped:" destination="xQ2-8f-wvO" eventType="touchUpInside" id="z9I-uY-SQj"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceO-Jk-ttv">
                                         <rect key="frame" x="0.0" y="360" width="334" height="20.5"/>
@@ -296,6 +299,7 @@
                         <outlet property="errorLabel" destination="ceO-Jk-ttv" id="VAh-QN-54d"/>
                         <outlet property="firstNameTextField" destination="csz-S4-ucV" id="xLG-Zx-yT5"/>
                         <outlet property="lastNameTextField" destination="BbC-yC-9rH" id="GTq-Al-jhy"/>
+                        <outlet property="passwordTextField" destination="yRm-u2-DWs" id="fqE-0O-h5b"/>
                         <outlet property="phoneNumber" destination="T7q-K1-2R7" id="okx-Yc-eww"/>
                     </connections>
                 </viewController>
