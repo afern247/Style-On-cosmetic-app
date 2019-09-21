@@ -1,11 +1,3 @@
-//
-//  LoginUserViewController.swift
-//  StyleOn
-//
-//  Created by Ramses Machado on 9/11/19.
-//  Copyright © 2019 Ramses Machado. All rights reserved.
-//
-
 import UIKit
 import FirebaseAuth
 
@@ -41,6 +33,11 @@ class LoginUserViewController: UIViewController {
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         // Do any additional setup after loading the view.
+    
+        // Remove before production
+        emailTextField.insertText("afern247@gmail.com")
+        passwordTextField.insertText("123456")
+        
     }
     
     
@@ -58,7 +55,7 @@ class LoginUserViewController: UIViewController {
         
         // TODO: Validate Text Fields
         
-        // Create cleaned versions of the text field
+        
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
