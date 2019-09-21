@@ -1,18 +1,20 @@
-//
-//  SignUpStylerViewController.swift
-//  StyleOn
-//
-//  Created by Ramses Machado on 9/11/19.
-//  Copyright © 2019 Ramses Machado. All rights reserved.
-//
-
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class SignUpStylerViewController: UIViewController {
 
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet var RegisterButtonSignupStyler: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        errorLabel.alpha = 0
         
         self.RegisterButtonSignupStyler.layer.cornerRadius = 20.0
         self.RegisterButtonSignupStyler.layer.borderWidth = 1.0
@@ -32,18 +34,8 @@ class SignUpStylerViewController: UIViewController {
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

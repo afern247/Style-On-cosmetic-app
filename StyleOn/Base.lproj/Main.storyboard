@@ -213,8 +213,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUSINESS REGISTRATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKm-Io-QLh">
+                                <rect key="frame" x="40" y="56" width="334" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="CYS-5C-SSF"/>
+                                    <constraint firstAttribute="width" constant="334" id="MR9-r9-nn5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ltL-IP-Gd2">
-                                <rect key="frame" x="40" y="84" width="334" height="380.5"/>
+                                <rect key="frame" x="40" y="115" width="334" height="380.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="csz-S4-ucV">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -268,19 +280,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ltL-IP-Gd2" firstAttribute="top" secondItem="WNd-NH-A7b" secondAttribute="top" constant="40" id="3MM-hN-Gxz"/>
+                            <constraint firstItem="AKm-Io-QLh" firstAttribute="leading" secondItem="WNd-NH-A7b" secondAttribute="leading" constant="40" id="0Vp-qn-0ls"/>
                             <constraint firstItem="ltL-IP-Gd2" firstAttribute="leading" secondItem="WNd-NH-A7b" secondAttribute="leading" constant="40" id="9BR-u1-e2R"/>
                             <constraint firstItem="WNd-NH-A7b" firstAttribute="trailing" secondItem="ltL-IP-Gd2" secondAttribute="trailing" constant="40" id="Idt-Op-W2G"/>
+                            <constraint firstItem="ltL-IP-Gd2" firstAttribute="top" secondItem="WNd-NH-A7b" secondAttribute="top" constant="71" id="Kk6-0h-PJz"/>
+                            <constraint firstItem="AKm-Io-QLh" firstAttribute="top" secondItem="WNd-NH-A7b" secondAttribute="top" constant="12" id="PUX-h1-9zU"/>
+                            <constraint firstItem="ltL-IP-Gd2" firstAttribute="top" secondItem="AKm-Io-QLh" secondAttribute="bottom" constant="8" id="dkW-b5-0pX"/>
+                            <constraint firstItem="WNd-NH-A7b" firstAttribute="trailing" secondItem="AKm-Io-QLh" secondAttribute="trailing" constant="40" id="hK1-wV-oUc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WNd-NH-A7b"/>
                     </view>
                     <connections>
                         <outlet property="RegisterButtonSignupStyler" destination="0Hm-J3-PWP" id="Tz5-sw-GgL"/>
+                        <outlet property="emailTextField" destination="rY1-yL-s2C" id="oHJ-V5-j5v"/>
+                        <outlet property="errorLabel" destination="ceO-Jk-ttv" id="VAh-QN-54d"/>
+                        <outlet property="firstNameTextField" destination="csz-S4-ucV" id="xLG-Zx-yT5"/>
+                        <outlet property="lastNameTextField" destination="BbC-yC-9rH" id="GTq-Al-jhy"/>
+                        <outlet property="phoneNumber" destination="T7q-K1-2R7" id="okx-Yc-eww"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uO6-mz-Zxr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="1179"/>
+            <point key="canvasLocation" x="1776.8115942028987" y="1177.9017857142856"/>
         </scene>
         <!--Login User View Controller-->
         <scene sceneID="LqP-QW-lem">
