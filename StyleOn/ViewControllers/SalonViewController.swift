@@ -1,44 +1,37 @@
-//
-//  SalonViewController.swift
-//  StyleOn
-//
-//  Created by Ramses Machado on 9/11/19.
-//  Copyright © 2019 Ramses Machado. All rights reserved.
-//
-
 import UIKit
 
 class SalonViewController: UIViewController {
+    
+    let searchBar = UISearchBar()
 
     @IBOutlet var userIconButton: UIButton!
     @IBOutlet var bookingIconButton: UIButton!
     @IBOutlet var servicesIconButton: UIButton!
+    @IBOutlet weak var seachBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
+        configureUI()
+        searchBarCustomizations()
         navButtons()
+    }
+   
+    func searchBarCustomizations() {
+        seachBar.layer.cornerRadius = 8
+    }
+    
+    func configureUI() {
+        view.backgroundColor = .white
     }
     
     func navButtons() {
-        
-        // Hide the error label
-        
         // Style the elements
         Utilities.navBookingButton(bookingIconButton)
         Utilities.navUserButton(userIconButton)
         Utilities.navServiceButton(servicesIconButton)
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

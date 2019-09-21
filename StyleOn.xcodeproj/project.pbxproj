@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		49E2236EFAC8C9A9D50967C1 /* Pods_StyleOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF38A971EFEB1C74D8EE3B27 /* Pods_StyleOn.framework */; };
+		698F18272336C22200B84855 /* demo.png in Resources */ = {isa = PBXBuildFile; fileRef = 698F18262336C22200B84855 /* demo.png */; };
 		CCD95E862329A83000CD9FC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD95E852329A83000CD9FC4 /* AppDelegate.swift */; };
 		CCD95E882329A83000CD9FC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD95E872329A83000CD9FC4 /* ViewController.swift */; };
 		CCD95E8B2329A83000CD9FC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD95E892329A83000CD9FC4 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		2C27B7892ED0BD02883CFF89 /* Pods-StyleOnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleOnTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StyleOnTests/Pods-StyleOnTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64F59AD72367BB5730F0FC1B /* Pods-StyleOnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleOnTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleOnTests/Pods-StyleOnTests.release.xcconfig"; sourceTree = "<group>"; };
 		66FDBB42CC14C87881636675 /* Pods-StyleOn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleOn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StyleOn/Pods-StyleOn.debug.xcconfig"; sourceTree = "<group>"; };
+		698F18262336C22200B84855 /* demo.png */ = {isa = PBXFileReference; explicitFileType = image.png; name = demo.png; path = ../../../../../../../../../Desktop/demo.png; sourceTree = "<group>"; };
 		6AB5F29B9257F385DD4B60AC /* Pods-StyleOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleOn.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleOn/Pods-StyleOn.release.xcconfig"; sourceTree = "<group>"; };
 		BF38A971EFEB1C74D8EE3B27 /* Pods_StyleOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StyleOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD95E822329A83000CD9FC4 /* StyleOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,7 +120,6 @@
 		CCD95E842329A83000CD9FC4 /* StyleOn */ = {
 			isa = PBXGroup;
 			children = (
-				CCD95EB9232C183F00CD9FC4 /* Media */,
 				CCD95EAF2329AAAE00CD9FC4 /* ViewControllers */,
 				CCD95E852329A83000CD9FC4 /* AppDelegate.swift */,
 				CCD95E892329A83000CD9FC4 /* Main.storyboard */,
@@ -143,6 +144,7 @@
 		CCD95EAF2329AAAE00CD9FC4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CCD95EB9232C183F00CD9FC4 /* Media */,
 				CCD95EB6232BD26900CD9FC4 /* Helpers */,
 				CCD95E872329A83000CD9FC4 /* ViewController.swift */,
 				CCD95EAD2329AA8400CD9FC4 /* SalonViewController.swift */,
@@ -166,8 +168,10 @@
 		CCD95EB9232C183F00CD9FC4 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				698F18262336C22200B84855 /* demo.png */,
 			);
-			path = Media;
+			name = Media;
+			path = ../Media;
 			sourceTree = "<group>";
 		};
 		FAAB8C6B94518E627F978A33 /* Frameworks */ = {
@@ -264,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD95E902329A83200CD9FC4 /* LaunchScreen.storyboard in Resources */,
+				698F18272336C22200B84855 /* demo.png in Resources */,
 				CCD95EB3232B300E00CD9FC4 /* GoogleService-Info.plist in Resources */,
 				CCD95E8D2329A83200CD9FC4 /* Assets.xcassets in Resources */,
 				CCD95E8B2329A83000CD9FC4 /* Main.storyboard in Resources */,
