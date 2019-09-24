@@ -71,6 +71,19 @@ class Utilities {
         button.layer.cornerRadius = 25.0
         button.tintColor = UIColor.black
     }
+    static func viewColor(_ view:UIView) {
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        let gradient = CAGradientLayer()
+        
+        view.backgroundColor = UIColor.init(red: 0/255, green: 194/255, blue: 189/255, alpha: 1)
+
+        gradient.frame = view.bounds
+        gradient.colors = [UIColor.white.cgColor, UIColor.black.cgColor]
+
+        view.layer.insertSublayer(gradient, at: 0)
+    
+    }
     
     static func isPasswordValid(_ password : String) -> Bool {
         
