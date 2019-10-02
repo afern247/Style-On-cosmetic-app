@@ -9,10 +9,11 @@
 import UIKit
 
 class PostServicesViewController: UIViewController {
-    @IBOutlet var photo: UIImageView!
+    @IBOutlet weak var photo: UIImageView!
     
     @IBOutlet var descriptionTextView: UITextView!
     @IBOutlet var postButton: UIButton!
+    var selectedImage: UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +25,10 @@ class PostServicesViewController: UIViewController {
     }
     
     @objc func handleSelectPhoto(){
+        
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        present(pickerController, animated: true, completion: nil)
         
     }
     
@@ -40,4 +45,15 @@ class PostServicesViewController: UIViewController {
     }
     */
 
+}
+extension PostServicesViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        print("did Finish Picking Media")
+        if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage{
+            selectedImage = image
+            photo.image = image
+            
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }
