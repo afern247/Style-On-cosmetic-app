@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		49E2236EFAC8C9A9D50967C1 /* Pods_StyleOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF38A971EFEB1C74D8EE3B27 /* Pods_StyleOn.framework */; };
+		CC5FD11123452FAD0098D287 /* UserSalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD11023452FAD0098D287 /* UserSalonViewController.swift */; };
+		CC5FD11323452FD80098D287 /* StylerSalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD11223452FD80098D287 /* StylerSalonViewController.swift */; };
+		CC5FD115234530640098D287 /* UserSearchSalonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD114234530640098D287 /* UserSearchSalonsViewController.swift */; };
+		CC5FD117234530790098D287 /* StylerSearchSalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD116234530790098D287 /* StylerSearchSalonViewController.swift */; };
+		CC5FD1192345309B0098D287 /* BookingServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD1182345309B0098D287 /* BookingServicesViewController.swift */; };
+		CC5FD11B234530C20098D287 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD11A234530C20098D287 /* UserProfileViewController.swift */; };
+		CC5FD11D234530E10098D287 /* StylerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD11C234530E10098D287 /* StylerProfileViewController.swift */; };
+		CC5FD11F234531070098D287 /* PostServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD11E234531070098D287 /* PostServicesViewController.swift */; };
 		CCD95E862329A83000CD9FC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD95E852329A83000CD9FC4 /* AppDelegate.swift */; };
 		CCD95E882329A83000CD9FC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD95E872329A83000CD9FC4 /* ViewController.swift */; };
 		CCD95E8B2329A83000CD9FC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD95E892329A83000CD9FC4 /* Main.storyboard */; };
@@ -43,6 +51,14 @@
 		66FDBB42CC14C87881636675 /* Pods-StyleOn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleOn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StyleOn/Pods-StyleOn.debug.xcconfig"; sourceTree = "<group>"; };
 		6AB5F29B9257F385DD4B60AC /* Pods-StyleOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleOn.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleOn/Pods-StyleOn.release.xcconfig"; sourceTree = "<group>"; };
 		BF38A971EFEB1C74D8EE3B27 /* Pods_StyleOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StyleOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5FD11023452FAD0098D287 /* UserSalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSalonViewController.swift; sourceTree = "<group>"; };
+		CC5FD11223452FD80098D287 /* StylerSalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylerSalonViewController.swift; sourceTree = "<group>"; };
+		CC5FD114234530640098D287 /* UserSearchSalonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchSalonsViewController.swift; sourceTree = "<group>"; };
+		CC5FD116234530790098D287 /* StylerSearchSalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylerSearchSalonViewController.swift; sourceTree = "<group>"; };
+		CC5FD1182345309B0098D287 /* BookingServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingServicesViewController.swift; sourceTree = "<group>"; };
+		CC5FD11A234530C20098D287 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		CC5FD11C234530E10098D287 /* StylerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylerProfileViewController.swift; sourceTree = "<group>"; };
+		CC5FD11E234531070098D287 /* PostServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServicesViewController.swift; sourceTree = "<group>"; };
 		CCD95E822329A83000CD9FC4 /* StyleOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD95E852329A83000CD9FC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCD95E872329A83000CD9FC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +164,14 @@
 				CCD95EA52329A98C00CD9FC4 /* SignUpViewController.swift */,
 				CCD95EAB2329AA5A00CD9FC4 /* LoginStylerViewController.swift */,
 				CCD95EA92329AA3500CD9FC4 /* LoginUserViewController.swift */,
+				CC5FD11023452FAD0098D287 /* UserSalonViewController.swift */,
+				CC5FD114234530640098D287 /* UserSearchSalonsViewController.swift */,
+				CC5FD116234530790098D287 /* StylerSearchSalonViewController.swift */,
+				CC5FD1182345309B0098D287 /* BookingServicesViewController.swift */,
+				CC5FD11A234530C20098D287 /* UserProfileViewController.swift */,
+				CC5FD11C234530E10098D287 /* StylerProfileViewController.swift */,
+				CC5FD11E234531070098D287 /* PostServicesViewController.swift */,
+				CC5FD11223452FD80098D287 /* StylerSalonViewController.swift */,
 				CCD95EB02329B61500CD9FC4 /* SignUpStylerViewController.swift */,
 			);
 			path = ViewControllers;
@@ -341,15 +365,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD95EB12329B61500CD9FC4 /* SignUpStylerViewController.swift in Sources */,
+				CC5FD11123452FAD0098D287 /* UserSalonViewController.swift in Sources */,
+				CC5FD11F234531070098D287 /* PostServicesViewController.swift in Sources */,
 				CCD95EA62329A98C00CD9FC4 /* SignUpViewController.swift in Sources */,
 				CCD95EB8232BDF3000CD9FC4 /* constants.swift in Sources */,
+				CC5FD1192345309B0098D287 /* BookingServicesViewController.swift in Sources */,
 				CCD95E882329A83000CD9FC4 /* ViewController.swift in Sources */,
 				CCD95EAE2329AA8400CD9FC4 /* SalonViewController.swift in Sources */,
 				CCD95E862329A83000CD9FC4 /* AppDelegate.swift in Sources */,
 				CCD95EAA2329AA3500CD9FC4 /* LoginUserViewController.swift in Sources */,
+				CC5FD11B234530C20098D287 /* UserProfileViewController.swift in Sources */,
+				CC5FD11D234530E10098D287 /* StylerProfileViewController.swift in Sources */,
 				CCD95EEB23317C7E00CD9FC4 /* AppointmentsModel.xcdatamodeld in Sources */,
+				CC5FD11323452FD80098D287 /* StylerSalonViewController.swift in Sources */,
 				CCD95EB5232BCF5600CD9FC4 /* Utilities.swift in Sources */,
 				CCD95EAC2329AA5A00CD9FC4 /* LoginStylerViewController.swift in Sources */,
+				CC5FD115234530640098D287 /* UserSearchSalonsViewController.swift in Sources */,
+				CC5FD117234530790098D287 /* StylerSearchSalonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
