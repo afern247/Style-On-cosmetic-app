@@ -706,16 +706,12 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-image" translatesAutoresizingMaskIntoConstraints="NO" id="ofi-bv-m8b">
                                         <rect key="frame" x="10" y="12" width="110" height="110"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="110" id="Xab-LJ-axd"/>
-                                            <constraint firstAttribute="height" constant="110" id="dqB-ny-ENc"/>
+                                            <constraint firstAttribute="width" constant="110" id="Zds-Uj-f8a"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eKe-hH-c8T">
-                                        <rect key="frame" x="130" y="12" width="274" height="116"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eKe-hH-c8T">
+                                        <rect key="frame" x="130" y="12" width="274" height="110"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="110" id="whP-1N-mAZ"/>
-                                        </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -724,11 +720,13 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="ofi-bv-m8b" firstAttribute="leading" secondItem="4FV-4Z-uFV" secondAttribute="leading" constant="10" id="9s5-oC-iWa"/>
-                                    <constraint firstAttribute="bottom" secondItem="ofi-bv-m8b" secondAttribute="bottom" constant="12" id="IHr-Mm-SmR"/>
-                                    <constraint firstItem="ofi-bv-m8b" firstAttribute="top" secondItem="4FV-4Z-uFV" secondAttribute="top" constant="12" id="J35-J9-Mo5"/>
-                                    <constraint firstItem="eKe-hH-c8T" firstAttribute="leading" secondItem="ofi-bv-m8b" secondAttribute="trailing" constant="10" id="Ysx-ix-tgT"/>
-                                    <constraint firstAttribute="trailing" secondItem="eKe-hH-c8T" secondAttribute="trailing" constant="10" id="pJo-l9-HAz"/>
+                                    <constraint firstItem="ofi-bv-m8b" firstAttribute="leading" secondItem="4FV-4Z-uFV" secondAttribute="leading" constant="10" id="8MI-q7-0Wr"/>
+                                    <constraint firstAttribute="trailing" secondItem="eKe-hH-c8T" secondAttribute="trailing" constant="10" id="Fjd-HN-bDu"/>
+                                    <constraint firstAttribute="bottom" secondItem="ofi-bv-m8b" secondAttribute="bottom" constant="18" id="FrT-AF-GTZ"/>
+                                    <constraint firstItem="eKe-hH-c8T" firstAttribute="bottom" secondItem="ofi-bv-m8b" secondAttribute="bottom" id="ebR-0b-cmd"/>
+                                    <constraint firstItem="ofi-bv-m8b" firstAttribute="top" secondItem="4FV-4Z-uFV" secondAttribute="top" constant="12" id="q9X-XV-hN6"/>
+                                    <constraint firstItem="eKe-hH-c8T" firstAttribute="leading" secondItem="ofi-bv-m8b" secondAttribute="trailing" constant="10" id="r1N-Iy-m0J"/>
+                                    <constraint firstItem="eKe-hH-c8T" firstAttribute="top" secondItem="ofi-bv-m8b" secondAttribute="top" id="web-FS-afd"/>
                                     <constraint firstAttribute="height" constant="140" id="zu1-nW-YCP"/>
                                 </constraints>
                             </view>
@@ -937,8 +935,8 @@
         <image name="demo2" width="684" height="676"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
-        <image name="location" catalog="system" width="64" height="60"/>
         <image name="location" width="29.5" height="43.5"/>
+        <image name="location" catalog="system" width="64" height="60"/>
         <image name="location.fill" catalog="system" width="64" height="60"/>
         <image name="logo" width="161" height="25.5"/>
         <image name="magnifyingglass" catalog="system" width="64" height="60"/>

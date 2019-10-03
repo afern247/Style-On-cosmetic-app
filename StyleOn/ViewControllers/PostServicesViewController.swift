@@ -13,7 +13,7 @@ class PostServicesViewController: UIViewController {
     
     @IBOutlet var descriptionTextView: UITextView!
     @IBOutlet var postButton: UIButton!
-    var selectedImage: UIImage?
+    //var selectedImage: UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,25 +35,23 @@ class PostServicesViewController: UIViewController {
     @IBAction func postButtonTuch(_ sender: Any) {
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 extension PostServicesViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        print("did Finish Picking Media")
-        if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage{
-            selectedImage = image
-            photo.image = image
-            
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+        var selectedImage: UIImage?
+        if let editedImage = info[.editedImage] as? UIImage {
+            selectedImage = editedImage
+            self.photo.image = selectedImage!
+            picker.dismiss(animated: true, completion: nil)
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            selectedImage = originalImage
+            self.photo.image = selectedImage!
+            picker.dismiss(animated: true, completion: nil)
         }
-        dismiss(animated: true, completion: nil)
+
     }
 }
+
+
