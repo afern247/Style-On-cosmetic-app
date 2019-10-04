@@ -13,6 +13,9 @@ target 'StyleOn' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'JGProgressHUD'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'SwiftyJSON'
 
   target 'StyleOnTests' do
     inherit! :search_paths
