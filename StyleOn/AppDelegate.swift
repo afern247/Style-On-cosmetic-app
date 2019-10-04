@@ -8,6 +8,7 @@
 import Firebase
 import UIKit
 import CoreData
+import JGProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

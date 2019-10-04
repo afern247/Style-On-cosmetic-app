@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StylerSearchSalonViewController: UIViewController {
+class StylerSearchSalonViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserSearchSalonsViewController: UIViewController {
+class UserSearchSalonsViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

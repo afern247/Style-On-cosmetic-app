@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class UserSalonViewController: UIViewController {
 
@@ -17,6 +18,20 @@ class UserSalonViewController: UIViewController {
     }
     
 
+    @IBAction func logOutTouchUpInside(_ sender: Any) {
+         
+        do {
+            try Auth.auth().signOut()
+        } catch let logoutError {
+            print(logoutError)
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier: "mainLoginPage")
+        self.present(vc, animated: false, completion: nil);
+        //self.performSegue(withIdentifier: "loginSegue", sender: nil)
+        //print(Auth.auth().currentUser)
+    }
     /*
     // MARK: - Navigation
 

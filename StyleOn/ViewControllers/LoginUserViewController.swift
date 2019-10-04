@@ -39,17 +39,7 @@ class LoginUserViewController: UIViewController {
         passwordTextField.insertText("123456")
         
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
     @IBAction func loginButtonTapped(_ sender: Any) {
         
         
@@ -68,10 +58,7 @@ class LoginUserViewController: UIViewController {
                 self.errorLabel.alpha = 1
             }
             else {
-                let salonViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.salonViewController) as? SalonViewController
-                
-                self.view.window?.rootViewController = salonViewController
-                self.view.window?.makeKeyAndVisible()
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
 
             }
         }

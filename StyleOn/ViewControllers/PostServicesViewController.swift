@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class PostServicesViewController: UIViewController {
     @IBOutlet weak var photo: UIImageView!
     
@@ -33,9 +34,12 @@ class PostServicesViewController: UIViewController {
     }
     
     @IBAction func postButtonTuch(_ sender: Any) {
+
+            //post here to database
     }
     
 }
+//method that select images from divise 
 extension PostServicesViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

@@ -12,6 +12,8 @@ struct Constants {
     
     struct Storyboard {
         
-        static let salonViewController = "SalonVC"
+        
+        static let stylerSalonViewController = "StylerSalonVC"
+        static let userSalonViewController = "UserSalonVC"
     }
 }

@@ -116,11 +116,12 @@ class SignUpStylerViewController: UIViewController {
     }
 
     func transitionToHome(){
+        
+        self.performSegue(withIdentifier: "loginStylerSegue", sender: nil)
+        //let stylerSalonViewController = //storyboard?.instantiateViewController(withIdentifier: //Constants.Storyboard.stylerSalonViewController) as? //StylerSalonViewController
 
-        let salonViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.salonViewController) as? SalonViewController
-
-        view.window?.rootViewController = salonViewController
-        view.window?.makeKeyAndVisible()
+        //view.window?.rootViewController = stylerSalonViewController
+        //view.window?.makeKeyAndVisible()
     }
 
 
