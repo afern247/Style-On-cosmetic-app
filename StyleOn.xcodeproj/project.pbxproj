@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49E2236EFAC8C9A9D50967C1 /* Pods_StyleOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF38A971EFEB1C74D8EE3B27 /* Pods_StyleOn.framework */; };
+		CC5F61A5234EAE1A00129E8C /* StylerSalonHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F61A4234EAE1A00129E8C /* StylerSalonHomeViewController.swift */; };
 		CC5FD11123452FAD0098D287 /* UserSalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD11023452FAD0098D287 /* UserSalonViewController.swift */; };
 		CC5FD11323452FD80098D287 /* StylerSalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD11223452FD80098D287 /* StylerSalonViewController.swift */; };
 		CC5FD115234530640098D287 /* UserSearchSalonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD114234530640098D287 /* UserSearchSalonsViewController.swift */; };
@@ -51,6 +52,7 @@
 		66FDBB42CC14C87881636675 /* Pods-StyleOn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleOn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StyleOn/Pods-StyleOn.debug.xcconfig"; sourceTree = "<group>"; };
 		6AB5F29B9257F385DD4B60AC /* Pods-StyleOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleOn.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleOn/Pods-StyleOn.release.xcconfig"; sourceTree = "<group>"; };
 		BF38A971EFEB1C74D8EE3B27 /* Pods_StyleOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StyleOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5F61A4234EAE1A00129E8C /* StylerSalonHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylerSalonHomeViewController.swift; sourceTree = "<group>"; };
 		CC5FD11023452FAD0098D287 /* UserSalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSalonViewController.swift; sourceTree = "<group>"; };
 		CC5FD11223452FD80098D287 /* StylerSalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylerSalonViewController.swift; sourceTree = "<group>"; };
 		CC5FD114234530640098D287 /* UserSearchSalonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchSalonsViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				CCD95EB6232BD26900CD9FC4 /* Helpers */,
 				CCD95E872329A83000CD9FC4 /* ViewController.swift */,
+				CC5F61A4234EAE1A00129E8C /* StylerSalonHomeViewController.swift */,
 				CCD95EAD2329AA8400CD9FC4 /* SalonViewController.swift */,
 				CCD95EA52329A98C00CD9FC4 /* SignUpViewController.swift */,
 				CCD95EAB2329AA5A00CD9FC4 /* LoginStylerViewController.swift */,
@@ -395,6 +398,7 @@
 			files = (
 				CCD95EB12329B61500CD9FC4 /* SignUpStylerViewController.swift in Sources */,
 				CC5FD1222347F0D60098D287 /* PostServiceStylerViewController.swift in Sources */,
+				CC5F61A5234EAE1A00129E8C /* StylerSalonHomeViewController.swift in Sources */,
 				CC5FD11123452FAD0098D287 /* UserSalonViewController.swift in Sources */,
 				CCD95EA62329A98C00CD9FC4 /* SignUpViewController.swift in Sources */,
 				CCD95EB8232BDF3000CD9FC4 /* constants.swift in Sources */,

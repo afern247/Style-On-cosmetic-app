@@ -591,21 +591,18 @@
                                 <rect key="frame" x="0.0" y="330" width="414" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Tell Us about your Service" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T6b-SX-CRu">
-                                        <rect key="frame" x="21" y="37" width="374" height="128"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p01-ak-sav">
+                                        <rect key="frame" x="21" y="0.0" width="97" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpD-Jk-6DN">
-                                        <rect key="frame" x="21" y="16" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Short Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2w-1x-wfI">
+                                        <rect key="frame" x="21" y="42" width="371" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -638,7 +635,7 @@
                                     <color key="titleShadowColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="postDidTap:" destination="sNs-xY-w8Z" eventType="touchUpInside" id="AbY-bq-DHA"/>
+                                    <action selector="postDidTap:" destination="sNs-xY-w8Z" eventType="touchUpInside" id="1Mi-5g-Diq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -656,7 +653,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Post Service" id="Oa8-ig-V7X"/>
                     <connections>
-                        <outlet property="captionTextView" destination="T6b-SX-CRu" id="xjk-YP-OOe"/>
+                        <outlet property="postDescription" destination="Z2w-1x-wfI" id="bZE-xi-zs4"/>
+                        <outlet property="postDescriptionTitle" destination="p01-ak-sav" id="vlH-kL-7dF"/>
                         <outlet property="postImageView" destination="I0h-jr-qhb" id="6pP-ns-ZsU"/>
                     </connections>
                 </viewController>
@@ -667,7 +665,7 @@
         <!--My Salon-->
         <scene sceneID="QeL-bC-l7m">
             <objects>
-                <viewController id="O8M-yk-xFH" customClass="StylerSalonViewController" customModule="StyleOn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="O8M-yk-xFH" customClass="StylerSalonHomeViewController" customModule="StyleOn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TeZ-Jc-9yt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -726,7 +724,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIC-KL-BfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6363.7681159420299" y="3047.5446428571427"/>
+            <point key="canvasLocation" x="5448" y="3779"/>
         </scene>
         <!--Styler Salon View Controller-->
         <scene sceneID="FRW-ot-y1H">

@@ -11,46 +11,68 @@ import Firebase
 import FirebaseStorage
 import FirebaseDatabase
 
-class PostServiceStylerViewController: UITabBarController {
-
+class PostServiceStylerViewController: UIViewController {
+    
+    var ref: DatabaseReference!
+    //var ref = DatabaseReference.init()
+    
+    let imagePicker = UIImagePickerController()
+    
     @IBOutlet var postImageView: UIImageView!
-    @IBOutlet var captionTextView: UITextView!
-    var textViewPlaceholderText = "Tell us about your service"
+
+    @IBOutlet var postDescriptionTitle: UITextField!
+    
+    @IBOutlet var postDescription: UITextField!
     
     var selectedImage: UIImage?
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
+        //This reference the database so it can be used later
+        self.ref = Database.database().reference()
+        
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleSelectPhoto))
+        postImageView.addGestureRecognizer(tapGesture)
+        postImageView.isUserInteractionEnabled = true
 
-        // Do any additional setup after loading the view.
     }
     
-
+    //This fuction puts the data into Firebase
     @IBAction func postDidTap(_ sender: Any) {
         
-        if captionTextView.text != textViewPlaceholderText && captionTextView.text != "" && selectedImage != nil {
-            let newPost = Post(image: self.selectedImage, caption: self.captionTextView.text)
-            newPost.save()
-            self.dismiss(animated: true, completion: nil)
+        self.saveFIRData()
+        
+    }
+    
+    //This function handle the selected photo
+    @objc func handleSelectPhoto(){
+        
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        present(pickerController, animated: true, completion: nil)
+        
+    }
+    
+    //This fuction add the data to the databse
+    func saveFIRData(){
+        self.uploadImage(self.postImageView.image!){ url in
+            self.saveImage(name: self.postDescription.text!, postURL: url!) { success in
+                if success != nil
+                {
+                    print("Yeah")
+                }
+            }
+        }
+
         }
     }
-    @IBAction func cancelDidTap(_ sender: Any) {
-        
-        self.dismiss(animated: true, completion: nil)
-    }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+//This method takes care of secting the image from library
 extension PostServiceStylerViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
         var selectedImage: UIImage?
@@ -66,20 +88,32 @@ extension PostServiceStylerViewController: UIImagePickerControllerDelegate, UINa
 
     }
 }
-
+///this handles the image
 extension PostServiceStylerViewController {
-    
+
     func uploadImage(_ image:UIImage, completion: @escaping (_ url: URL?) -> ()){
         let storageRef = Storage.storage().reference().child("myimage.png")
         let imgData = postImageView.image?.pngData()
-        let metaData = storageMetadata()
+        let metaData = StorageMetadata()
         metaData.contentType = "image/png"
-        storageRef.putData(imageData!, metadata: metaData) { (metadata, error) in
-            if error == nil{
+        storageRef.putData(imgData!, metadata: metaData) { (metadata, error) in
+            if error == nil {
                 print("success")
-                storageRef.downloadUrl(completion: { (url, error) in completion(url!)
+                storageRef.downloadURL(completion: { (url, error) in
+                    completion(url)
                 })
+            }else{
+                print("error in save image")
+                completion(nil)
             }
         }
     }
+    
+    func saveImage(name: String, postURL:URL, completion: @escaping ((_ url: URL?) -> ())){
+        let dict = ["title": postDescriptionTitle.text!, "description": postDescription.text!, "postUrl": postURL.absoluteString] as [String: Any]
+        self.ref.child("post").childByAutoId().setValue(dict)
+    }
+    
+
+
 }
