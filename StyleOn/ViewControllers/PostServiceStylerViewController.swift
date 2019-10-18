@@ -1,11 +1,3 @@
-//
-//  PostServiceStylerViewController.swift
-//  StyleOn
-//
-//  Created by Ramses Machado on 10/4/19.
-//  Copyright © 2019 Ramses Machado. All rights reserved.
-//
-
 import UIKit
 import Firebase
 import FirebaseStorage
@@ -62,6 +54,7 @@ class PostServiceStylerViewController: UIViewController {
             self.saveImage(name: self.postDescription.text!, postURL: url!) { success in
                 if success != nil
                 {
+                    // Fix this because doesn't work
                     print("Yeah")
                 }
             }
@@ -90,6 +83,7 @@ extension PostServiceStylerViewController: UIImagePickerControllerDelegate, UINa
 }
 ///this handles the image
 extension PostServiceStylerViewController {
+
 
     func uploadImage(_ image:UIImage, completion: @escaping (_ url: URL?) -> ()){
         let storageRef = Storage.storage().reference().child("myimage.png")
