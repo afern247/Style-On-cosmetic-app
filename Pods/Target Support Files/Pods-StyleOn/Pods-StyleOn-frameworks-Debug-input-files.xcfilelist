@@ -2,7 +2,9 @@ ${PODS_ROOT}/Target Support Files/Pods-StyleOn/Pods-StyleOn-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework
 ${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework
 ${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework
+${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
 ${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework
 ${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework
 ${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework
