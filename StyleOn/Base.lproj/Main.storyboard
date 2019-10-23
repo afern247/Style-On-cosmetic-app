@@ -644,7 +644,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w2M-Sy-5WJ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Post Service" id="Oa8-ig-V7X"/>
+                    <navigationItem key="navigationItem" title="Post Service" id="Oa8-ig-V7X">
+                        <barButtonItem key="rightBarButtonItem" image="location" id="7AW-Rb-SlA"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="postDescription" destination="Z2w-1x-wfI" id="bZE-xi-zs4"/>
                         <outlet property="postDescriptionTitle" destination="p01-ak-sav" id="vlH-kL-7dF"/>
@@ -828,6 +830,7 @@
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="location" catalog="system" width="64" height="60"/>
+        <image name="location" width="29.5" height="43.5"/>
         <image name="location.fill" catalog="system" width="64" height="60"/>
         <image name="logo" width="161" height="25.5"/>
         <image name="magnifyingglass" catalog="system" width="64" height="60"/>

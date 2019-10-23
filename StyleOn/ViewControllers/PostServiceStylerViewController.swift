@@ -2,11 +2,13 @@ import UIKit
 import Firebase
 import FirebaseStorage
 import FirebaseDatabase
+import CoreLocation
 
-class PostServiceStylerViewController: UIViewController {
+class PostServiceStylerViewController: UIViewController, CLLocationManagerDelegate {
     
     var ref: DatabaseReference!
-    //var ref = DatabaseReference.init()
+    
+    let locationManager = CLLocationManager()
     
     let imagePicker = UIImagePickerController()
     
@@ -20,6 +22,15 @@ class PostServiceStylerViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        locationManager.requestAlwaysAuthorization()
+        
+        //locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
         
         super.viewDidLoad()
         //This reference the database so it can be used later
@@ -30,6 +41,12 @@ class PostServiceStylerViewController: UIViewController {
         postImageView.addGestureRecognizer(tapGesture)
         postImageView.isUserInteractionEnabled = true
 
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            print(location.coordinate)
+        }
     }
     
     //This fuction puts the data into Firebase

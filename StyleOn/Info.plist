@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need your location so people can locate your service</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need your location so people can locate your post</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location so people can locate your service</string>
 </dict>
 </plist>
