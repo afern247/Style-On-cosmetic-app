@@ -11,9 +11,6 @@
 		CC5F61A5234EAE1A00129E8C /* StylerSalonHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F61A4234EAE1A00129E8C /* StylerSalonHomeViewController.swift */; };
 		CC5F61AC235FCAE800129E8C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F61AA235FCAE800129E8C /* PostTableViewCell.swift */; };
 		CC5F61AD235FCAE800129E8C /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5F61AB235FCAE800129E8C /* PostTableViewCell.xib */; };
-		CC5F61AF235FF7E900129E8C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F61AE235FF7E900129E8C /* UserProfile.swift */; };
-		CC5F61B1235FF87800129E8C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F61B0235FF87800129E8C /* Post.swift */; };
-		CC5F61B5235FF9B500129E8C /* StylerPostServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F61B4235FF9B500129E8C /* StylerPostServices.swift */; };
 		CC5FD11123452FAD0098D287 /* UserSalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD11023452FAD0098D287 /* UserSalonViewController.swift */; };
 		CC5FD11323452FD80098D287 /* StylerSalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD11223452FD80098D287 /* StylerSalonViewController.swift */; };
 		CC5FD115234530640098D287 /* UserSearchSalonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FD114234530640098D287 /* UserSearchSalonsViewController.swift */; };
@@ -60,9 +57,6 @@
 		CC5F61A4234EAE1A00129E8C /* StylerSalonHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylerSalonHomeViewController.swift; sourceTree = "<group>"; };
 		CC5F61AA235FCAE800129E8C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		CC5F61AB235FCAE800129E8C /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
-		CC5F61AE235FF7E900129E8C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		CC5F61B0235FF87800129E8C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		CC5F61B4235FF9B500129E8C /* StylerPostServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylerPostServices.swift; sourceTree = "<group>"; };
 		CC5FD11023452FAD0098D287 /* UserSalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSalonViewController.swift; sourceTree = "<group>"; };
 		CC5FD11223452FD80098D287 /* StylerSalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylerSalonViewController.swift; sourceTree = "<group>"; };
 		CC5FD114234530640098D287 /* UserSearchSalonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchSalonsViewController.swift; sourceTree = "<group>"; };
@@ -197,9 +191,6 @@
 			children = (
 				CCD95EB4232BCF5500CD9FC4 /* Utilities.swift */,
 				CCD95EB7232BDF3000CD9FC4 /* constants.swift */,
-				CC5F61AE235FF7E900129E8C /* UserProfile.swift */,
-				CC5F61B0235FF87800129E8C /* Post.swift */,
-				CC5F61B4235FF9B500129E8C /* StylerPostServices.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -384,9 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD95EB12329B61500CD9FC4 /* SignUpStylerViewController.swift in Sources */,
-				CC5F61B1235FF87800129E8C /* Post.swift in Sources */,
 				CC5FD1222347F0D60098D287 /* PostServiceStylerViewController.swift in Sources */,
-				CC5F61AF235FF7E900129E8C /* UserProfile.swift in Sources */,
 				CC5F61A5234EAE1A00129E8C /* StylerSalonHomeViewController.swift in Sources */,
 				CC5FD11123452FAD0098D287 /* UserSalonViewController.swift in Sources */,
 				CCD95EA62329A98C00CD9FC4 /* SignUpViewController.swift in Sources */,
@@ -398,7 +387,6 @@
 				CCD95E862329A83000CD9FC4 /* AppDelegate.swift in Sources */,
 				CCD95EAA2329AA3500CD9FC4 /* LoginUserViewController.swift in Sources */,
 				CC5FD11B234530C20098D287 /* UserProfileViewController.swift in Sources */,
-				CC5F61B5235FF9B500129E8C /* StylerPostServices.swift in Sources */,
 				CC5FD11D234530E10098D287 /* StylerProfileViewController.swift in Sources */,
 				CCD95EEB23317C7E00CD9FC4 /* AppointmentsModel.xcdatamodeld in Sources */,
 				CC5FD11323452FD80098D287 /* StylerSalonViewController.swift in Sources */,
