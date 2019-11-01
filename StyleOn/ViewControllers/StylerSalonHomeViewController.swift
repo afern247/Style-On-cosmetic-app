@@ -52,6 +52,7 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
+        cell.set(post: posts[indexPath.row])
         return cell
     }
     

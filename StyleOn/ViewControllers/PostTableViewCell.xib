@@ -71,7 +71,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="postTextLabel" destination="1m0-wF-JF9" id="Zy0-nZ-UNw"/>
+                <outlet property="postTitle" destination="O9K-f8-ony" id="pgQ-Sy-xOK"/>
                 <outlet property="post_title" destination="O9K-f8-ony" id="vd4-yZ-Cun"/>
+                <outlet property="postsImageView" destination="ul7-Of-7eB" id="iAs-UY-b07"/>
+                <outlet property="subtitleLabel" destination="zJO-gd-eK0" id="8bR-Sf-dbn"/>
             </connections>
             <point key="canvasLocation" x="149.27536231884059" y="130.58035714285714"/>
         </tableViewCell>
