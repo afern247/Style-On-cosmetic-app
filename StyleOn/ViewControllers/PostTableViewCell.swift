@@ -1,14 +1,9 @@
-//
-//  PostTableViewCell.swift
-//  StyleOn
-//
-//  Created by Ramses Machado on 10/22/19.
-//  Copyright © 2019 Ramses Machado. All rights reserved.
-//
-
 import UIKit
 
 class PostTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var post_title: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +15,7 @@ class PostTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+
     
 }

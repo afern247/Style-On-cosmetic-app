@@ -1,38 +1,18 @@
-//
-//  StylerSalonHomeViewController.swift
-//  StyleOn
-//
-//  Created by Ramses Machado on 10/9/19.
-//  Copyright © 2019 Ramses Machado. All rights reserved.
-//
-
 import UIKit
 import Firebase
 import FirebaseAuth
 import Foundation
 
 class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
-        return cell
-    }
-    
-
+        
+    // Instantiate table view to post content
     var tableView:UITableView!
-//    var posts = [Post]()
+
+    // Loads current view
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView = UITableView(frame: view.bounds, style: .plain)
-        //tableView.backgroundColor = UIColor.blue
         
         let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "postCell")
@@ -40,6 +20,10 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         view.addSubview(tableView)
         
         var layoutGuide:UILayoutGuide
+        
+        if #available(iOS 11.0, *){
+            layoutGuide = view.safeAreaLayoutGuide
+        }
         
         layoutGuide = view.safeAreaLayoutGuide
         
@@ -60,8 +44,6 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
 //            }
 //        }
         // Do any additional setup after loading the view.
-        
-    
         
         
     }
@@ -92,6 +74,20 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
 //
 //        return cell
 //    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 12
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
+        return cell
+    }
+    
+    
     @IBAction func handleLogout(_ sender: Any) {
         
         try! Auth.auth().signOut()
