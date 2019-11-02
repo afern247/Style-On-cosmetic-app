@@ -12,7 +12,9 @@ class PostTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        postsImageView.layer.cornerRadius = postsImageView.bounds.height / 2
+        postsImageView.clipsToBounds = true
         
         postsImageView.layer.cornerRadius = postsImageView.bounds.height / 2
         postsImageView.clipsToBounds = true
