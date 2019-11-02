@@ -397,7 +397,7 @@
                         <outlet property="errorLabel" destination="1Sy-tf-e7i" id="W8P-fL-bmw"/>
                         <outlet property="loginButtonRounded" destination="DqS-rc-Oj8" id="ObZ-tX-XxD"/>
                         <outlet property="passwordTextField" destination="n3t-fW-gT5" id="mUr-Wu-fRK"/>
-                        <segue destination="wWG-ej-o0I" kind="show" identifier="loginSegue" id="apn-sg-6fn"/>
+                        <segue destination="wWG-ej-o0I" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="apn-sg-6fn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DeJ-DA-Pmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -495,11 +495,11 @@
             <objects>
                 <viewController id="wff-2e-DDJ" customClass="BookingServicesViewController" customModule="StyleOn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yPA-e3-4bQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byi-c7-lEn">
-                                <rect key="frame" x="0.0" y="-10" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
@@ -523,11 +523,11 @@
             <objects>
                 <viewController id="plq-ga-1cA" customClass="UserProfileViewController" customModule="StyleOn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sWk-yF-q8C">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEh-Pg-MoO">
-                                <rect key="frame" x="0.0" y="-10" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
@@ -616,6 +616,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="sGU-JF-wND" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="xMD-EQ-7CN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgs-Qa-OTp">
                                 <rect key="frame" x="20" y="693" width="374" height="40"/>
@@ -631,6 +634,7 @@
                                 </state>
                                 <connections>
                                     <action selector="postDidTap:" destination="sNs-xY-w8Z" eventType="touchUpInside" id="1Mi-5g-Diq"/>
+                                    <segue destination="sGU-JF-wND" kind="presentation" modalPresentationStyle="fullScreen" id="7mw-A0-wih"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -717,11 +721,11 @@
             <objects>
                 <viewController id="5VF-vj-s2H" customClass="UserSalonViewController" customModule="StyleOn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DcG-hb-C07">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FIU-3I-b63">
-                                <rect key="frame" x="0.0" y="-10" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
@@ -735,7 +739,7 @@
                     <navigationItem key="navigationItem" title="Salon" id="shv-AN-k8U">
                         <barButtonItem key="leftBarButtonItem" title="LogOut" id="yta-HW-d9Z">
                             <connections>
-                                <action selector="logOutTouchUpInside:" destination="5VF-vj-s2H" id="vRi-o5-3nc"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="tD1-TL-lPM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -771,7 +775,7 @@
                     <tabBarItem key="tabBarItem" title="Salon" image="house" catalog="system" selectedImage="house.fill" id="mse-dR-YeX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YT4-Og-2om">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -789,6 +793,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zeO-eC-NXu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Salon" image="house" catalog="system" selectedImage="house.fill" id="DHF-3n-bF3"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="NO8-jw-j3u"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l2a-hf-PZU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -847,8 +852,9 @@
         <image name="tray.fill" catalog="system" width="64" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="7mw-A0-wih"/>
         <segue reference="8sy-ze-kUq"/>
         <segue reference="Jsb-nN-nPT"/>
-        <segue reference="QCc-Ph-Ods"/>
+        <segue reference="tD1-TL-lPM"/>
     </inferredMetricsTieBreakers>
 </document>
