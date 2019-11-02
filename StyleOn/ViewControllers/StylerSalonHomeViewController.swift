@@ -14,11 +14,57 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         Post(id: "3", author: "Drizzy Drake", text: "Spittin that fire while I smoke by the fire")
     ]
     
+    func checkIfUserIsLoggedIn() {
+        if Auth.auth().currentUser?.uid == nil {
+            print("######### user is NOT logged in #########")
+            perform(#selector(handleLogout), with: nil, afterDelay: 0)
+        } else {
+            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ user is logged in @@@@@@@@@@@@@@@@@@@@@@@@@")
+            // Gets user ID
+            let uid = Auth.auth().currentUser?.uid
+            
+            // Functions
+            print(uid!)
+            Database.database().reference().child("post").child(uid!).observeSingleEvent(of: .value, with: {( snapchot ) in
+                print(snapchot)
+            }, withCancel: nil)
+        }
+    }
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     // Loads current view
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         tableView = UITableView(frame: view.bounds, style: .plain)
         
@@ -45,6 +91,35 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         tableView.tableFooterView = UIView()
         tableView.reloadData()
         
+        
+        
+//        checkIfUserIsLoggedIn()
+        
+        
+        refHandle = postRef.observe(DataEventType.value, with: { (snapshot) in
+            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            
+            // ...
+        })
+
+        
+        
+        
+        let userID = Auth.auth().currentUser?.uid
+                ref.child("post").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                    print(snapshot)
+                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                    
+                    // Get user value
+        //            let value = snapshot.value as? NSDictionary
+        //            let username = value?["username"] as? String ?? ""
+        //            let user = User(username: username)
+
+          
+                }) { (error) in
+                    print(error.localizedDescription)
+                }
         
     }
     
