@@ -101,7 +101,6 @@ extension PostServiceStylerViewController: UIImagePickerControllerDelegate, UINa
 ///this handles the image
 extension PostServiceStylerViewController {
 
-
     func uploadImage(_ image:UIImage, completion: @escaping (_ url: URL?) -> ()){
         let storageRef = Storage.storage().reference().child("myimage.png")
         let imgData = postImageView.image?.pngData()

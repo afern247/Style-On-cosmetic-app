@@ -14,6 +14,8 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         Post(id: "3", author: "Drizzy Drake", text: "Spittin that fire while I smoke by the fire")
     ]
     
+    
+    
     // Loads current view
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,7 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.reloadData()
+        
         
     }
     

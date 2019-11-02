@@ -1,11 +1,3 @@
-//
-//  LoginStylerViewController.swift
-//  StyleOn
-//
-//  Created by Ramses Machado on 9/11/19.
-//  Copyright © 2019 Ramses Machado. All rights reserved.
-//
-
 import UIKit
 import FirebaseAuth
 
@@ -50,10 +42,6 @@ class LoginStylerViewController: UIViewController {
 
     @IBAction func StylerLoginButtonTapped(_ sender: Any) {
         
-        
-        // TODO: Validate Text Fields
-        
-        
         let email = styleremailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = stylerpasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
@@ -66,9 +54,7 @@ class LoginStylerViewController: UIViewController {
                 self.errorLabelstyler.alpha = 1
             }
             else {
-                
                 self.performSegue(withIdentifier: "loginStylerSegue", sender: nil)
-
             }
         }
         
