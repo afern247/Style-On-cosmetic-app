@@ -48,24 +48,6 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         tableView = UITableView(frame: view.bounds, style: .plain)
         
         let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
@@ -91,35 +73,91 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         tableView.tableFooterView = UIView()
         tableView.reloadData()
         
-        
-        
 //        checkIfUserIsLoggedIn()
         
+//        ref.child("post").childByAutoId()
+
+
         
-        refHandle = postRef.observe(DataEventType.value, with: { (snapshot) in
-            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+
+        
+        
+        
+//        var ref: DatabaseReference!
+//        ref = Database.database().reference(withPath: "post")
+//
+//        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+//        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+//            for child in snapshot.children {
+//                let snap = child as! DataSnapshot
+//                //        let key = snap.key
+//
+//                let value = snap.value
+//
+//
+//                print("value = \(value!)")
+//            }
+//        })
+        
+        
+
+        
+         let postsRef = Database.database().reference(withPath: "post")
+        
+        postsRef.observe(.value, with: { snapshot in
             
-            // ...
+//            var tempPosts = [Post]()
+            
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+//                    let author = dict["author"] as? [String:Any],
+//                    let uid = author["uid"] as? String,
+//                    let username = author["username"] as? String,
+//                    let photoURL = author["photoURL"] as? String,
+//                    let url = URL(string:photoURL),
+                    let title = dict["title"] as? String
+//                    let timestamp = dict["timestamp"] as? Double
+                {
+                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                    print(title)
+//                    let userProfile = UserProfile(uid: uid, username: username, photoURL: url)
+//                    let post = Post(id: childSnapshot.key, author: userProfile, text: text, timestamp:timestamp)
+//                    tempPosts.append(post)
+                }
+            }
+            
+//            self.posts = tempPosts
+//            self.tableView.reloadData()
+            
         })
 
+    
         
         
         
-        let userID = Auth.auth().currentUser?.uid
-                ref.child("post").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
-                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-                    print(snapshot)
-                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-                    
-                    // Get user value
-        //            let value = snapshot.value as? NSDictionary
-        //            let username = value?["username"] as? String ?? ""
-        //            let user = User(username: username)
+        
+//
+//
+//        let userID = Auth.auth().currentUser?.uid
+//                ref.child("post").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+//                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+//                    print(snapshot)
+//                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+//
+//                    // Get user value
+//        //            let value = snapshot.value as? NSDictionary
+//        //            let username = value?["username"] as? String ?? ""
+//        //            let user = User(username: username)
+//
+//
+//        }) { (error) in
+//            print(error.localizedDescription)
+//        }
 
-          
-                }) { (error) in
-                    print(error.localizedDescription)
-                }
+        
+        
         
     }
     
