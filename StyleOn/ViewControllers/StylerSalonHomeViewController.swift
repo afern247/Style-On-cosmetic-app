@@ -8,7 +8,11 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
     // Instantiate table view to post content
     var tableView:UITableView!
 
-    var posts = [Post]()
+    var posts = [
+    Post(id: "1", author: "Ari", text: "I'm scared of hair cuts!"),
+    Post(id: "2", author: "Luke Skywalker", text: "I did not like the Last Jedi! Because I did not get to use my awesome Jedi powers!"),
+    Post(id: "3", author: "Drizzy Drake", text: "Spittin that fire while I smoke by the fire")
+    ]
     
     // Loads current view
     override func viewDidLoad() {
@@ -88,7 +92,7 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
 
                             let post = Post(id: "childSnapshot.key", author: "userProfile", text: "text")
                             
-                            print(post)
+                            print(title)
                             tempPosts.append(post)
                         }
                     }
