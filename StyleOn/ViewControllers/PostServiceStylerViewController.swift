@@ -119,8 +119,6 @@ extension PostServiceStylerViewController {
         }
     }
     
-    
-    
     func saveImage(name: String, postURL:URL, completion: @escaping ((_ url: URL?) -> ())){
         
 //        let userID = Auth.auth().currentUser?.uid

@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  StyleOn
-//
-//  Created by Ramses Machado on 9/11/19.
-//  Copyright © 2019 Ramses Machado. All rights reserved.
-//
 import Firebase
 import UIKit
 import CoreData

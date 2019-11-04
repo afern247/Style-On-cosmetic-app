@@ -37,8 +37,7 @@ class SignUpStylerViewController: UIViewController {
 
     }
     
-    
-    
+
     //Check the fields and validate taht the data is correct. If everything is correct, this method returns //nilotherwise it returns the error message
     func validateFields() -> String? {
 
@@ -118,14 +117,6 @@ class SignUpStylerViewController: UIViewController {
     func transitionToHome(){
         
         self.performSegue(withIdentifier: "loginStylerSegue", sender: nil)
-        //let stylerSalonViewController = //storyboard?.instantiateViewController(withIdentifier: //Constants.Storyboard.stylerSalonViewController) as? //StylerSalonViewController
-
-        //view.window?.rootViewController = stylerSalonViewController
-        //view.window?.makeKeyAndVisible()
     }
-
-
-
-
 
 }

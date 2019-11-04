@@ -31,19 +31,6 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         }
     }
     
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     // Loads current view
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,30 +65,6 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
 //        ref.child("post").childByAutoId()
 
 
-        
-
-        
-        
-        
-//        var ref: DatabaseReference!
-//        ref = Database.database().reference(withPath: "post")
-//
-//        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-//        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-//            for child in snapshot.children {
-//                let snap = child as! DataSnapshot
-//                //        let key = snap.key
-//
-//                let value = snap.value
-//
-//
-//                print("value = \(value!)")
-//            }
-//        })
-        
-        
-
-        
          let postsRef = Database.database().reference(withPath: "post")
         
         postsRef.observe(.value, with: { snapshot in
@@ -132,33 +95,6 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
 //            self.tableView.reloadData()
             
         })
-
-    
-        
-        
-        
-        
-//
-//
-//        let userID = Auth.auth().currentUser?.uid
-//                ref.child("post").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
-//                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-//                    print(snapshot)
-//                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-//
-//                    // Get user value
-//        //            let value = snapshot.value as? NSDictionary
-//        //            let username = value?["username"] as? String ?? ""
-//        //            let user = User(username: username)
-//
-//
-//        }) { (error) in
-//            print(error.localizedDescription)
-//        }
-
-        
-        
-        
     }
     
     

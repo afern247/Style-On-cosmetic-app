@@ -41,11 +41,7 @@ class LoginUserViewController: UIViewController {
     }
 
     @IBAction func loginButtonTapped(_ sender: Any) {
-        
-        
-        // TODO: Validate Text Fields
-        
-        
+
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         

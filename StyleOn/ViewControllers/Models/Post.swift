@@ -1,11 +1,3 @@
-//
-//  Post.swift
-//  StyleOn
-//
-//  Created by Arturo Fernandez on 11/1/19.
-//  Copyright © 2019 Ramses Machado. All rights reserved.
-//
-
 import Foundation
 
 class Post {

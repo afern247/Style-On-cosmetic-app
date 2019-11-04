@@ -1,11 +1,3 @@
-//
-//  SignUpViewController.swift
-//  StyleOn
-//
-//  Created by Ramses Machado on 9/11/19.
-//  Copyright © 2019 Ramses Machado. All rights reserved.
-//
-
 import UIKit
 import FirebaseAuth
 import Firebase
@@ -128,10 +120,6 @@ class SignUpViewController: UIViewController {
     func transitionToHome(){
         
         self.performSegue(withIdentifier: "loginSegue", sender: nil)
-        //let userSalonViewController = //storyboard?.instantiateViewController(withIdentifier: //Constants.Storyboard.userSalonViewController) as? //UserSalonViewController
-        
-        //view.window?.rootViewController = userSalonViewController
-        //view.window?.makeKeyAndVisible()
     }
     
 }

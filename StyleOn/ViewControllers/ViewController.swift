@@ -1,12 +1,5 @@
-//
-//  ViewController.swift
-//  StyleOn
-//
-//  Created by Ramses Machado on 9/11/19.
-//  Copyright © 2019 Ramses Machado. All rights reserved.
-//
-
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
@@ -18,8 +11,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        do {
+            try Auth.auth().signOut()
+        } catch let logoutError {
+            print(logoutError)
+        }
         
         self.RoundedButton.layer.cornerRadius = 20.0
         self.RoundedButton.layer.borderWidth = 1.0
@@ -38,7 +35,6 @@ class ViewController: UIViewController {
         self.RoundedButton1.layer.borderColor = UIColor.white.cgColor
         
         
-        super.viewDidLoad()
         let topColor = UIColor(red: 162/255, green: 21/255, blue: 255/255, alpha: 1)
         let bottomColor = UIColor(red: 0/255, green: 194/255, blue: 189/255, alpha: 1)
         
@@ -51,7 +47,6 @@ class ViewController: UIViewController {
         
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
-    
         
     }
 
