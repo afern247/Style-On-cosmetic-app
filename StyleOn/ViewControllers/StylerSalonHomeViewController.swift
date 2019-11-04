@@ -8,9 +8,7 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
     // Instantiate table view to post content
     var tableView:UITableView!
 
-    var posts = [
-        Post(id: "1", author: "Ari", text: "I'm scared of hair cuts!")
-    ]
+    var posts = [Post]()
     
     // Loads current view
     override func viewDidLoad() {
@@ -41,41 +39,8 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         tableView.tableFooterView = UIView()
         tableView.reloadData()
         
-//        ref.child("post").childByAutoId()
+        observe()
 
-
-         let postsRef = Database.database().reference(withPath: "post")
-        
-        postsRef.observe(.value, with: { snapshot in
-            
-            var tempPosts = [Post]()
-            
-            for child in snapshot.children {
-                if let childSnapshot = child as? DataSnapshot,
-                    let dict = childSnapshot.value as? [String:Any],
-//                    let author = dict["author"] as? [String:Any],
-//                    let uid = author["uid"] as? String,
-//                    let username = author["username"] as? String,
-//                    let photoURL = author["photoURL"] as? String,
-//                    let url = URL(string:photoURL),
-                    let title = dict["title"] as? String
-//                    let timestamp = dict["timestamp"] as? Double
-                {
-                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-//                    print(title)
-
-                    let post = Post(id: "childSnapshot.key", author: "userProfile", text: "text")
-                    
-                    print(post)
-                    tempPosts.append(post)
-                }
-            }
-            
-//            self.posts = tempPosts
-            self.tableView.reloadData()
-            
-        })
     }
     
     
@@ -97,4 +62,50 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         try! Auth.auth().signOut()
         self.dismiss(animated: false, completion: nil)
     }
+
+
+    func observe() {
+        let postsRef = Database.database().reference(withPath: "post")
+                
+                postsRef.observe(.value, with: { snapshot in
+                    
+                    var tempPosts = [Post]()
+                    
+                    for child in snapshot.children {
+                        if let childSnapshot = child as? DataSnapshot,
+                            let dict = childSnapshot.value as? [String:Any],
+        //                    let author = dict["author"] as? [String:Any],
+        //                    let uid = author["uid"] as? String,
+        //                    let username = author["username"] as? String,
+        //                    let photoURL = author["photoURL"] as? String,
+        //                    let url = URL(string:photoURL),
+                            let title = dict["title"] as? String
+        //                    let timestamp = dict["timestamp"] as? Double
+                        {
+                            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+        //                    print(title)
+
+                            let post = Post(id: "childSnapshot.key", author: "userProfile", text: "text")
+                            
+                            print(post)
+                            tempPosts.append(post)
+                        }
+                    }
+                    
+        //            self.posts = tempPosts
+                    self.tableView.reloadData()
+                    
+                })
+    }
+
+
+
+
+    
+    
+    
+    
+    
+    
 }
