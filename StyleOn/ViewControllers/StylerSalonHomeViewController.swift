@@ -90,9 +90,10 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
                             print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         //                    print(title)
 
-                            let post = Post(id: "childSnapshot.key", author: "userProfile", text: "text")
+                            let post = Post(id: title, author: title, text: "text")
                             
-                            print(title)
+                            print(post.id)
+                         
                             tempPosts.append(post)
                         }
                     }
