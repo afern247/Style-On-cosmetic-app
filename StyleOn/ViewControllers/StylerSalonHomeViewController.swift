@@ -14,23 +14,6 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         Post(id: "3", author: "Drizzy Drake", text: "Spittin that fire while I smoke by the fire")
     ]
     
-    func checkIfUserIsLoggedIn() {
-        if Auth.auth().currentUser?.uid == nil {
-            print("######### user is NOT logged in #########")
-            perform(#selector(handleLogout), with: nil, afterDelay: 0)
-        } else {
-            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ user is logged in @@@@@@@@@@@@@@@@@@@@@@@@@")
-            // Gets user ID
-            let uid = Auth.auth().currentUser?.uid
-            
-            // Functions
-            print(uid!)
-            Database.database().reference().child("post").child(uid!).observeSingleEvent(of: .value, with: {( snapchot ) in
-                print(snapchot)
-            }, withCancel: nil)
-        }
-    }
-    
     // Loads current view
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,8 +43,6 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         tableView.tableFooterView = UIView()
         tableView.reloadData()
         
-//        checkIfUserIsLoggedIn()
-        
 //        ref.child("post").childByAutoId()
 
 
@@ -69,7 +50,7 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         
         postsRef.observe(.value, with: { snapshot in
             
-//            var tempPosts = [Post]()
+            var tempPosts = [Post]()
             
             for child in snapshot.children {
                 if let childSnapshot = child as? DataSnapshot,
@@ -85,7 +66,7 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
                     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
                     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
                     print(title)
-//                    let userProfile = UserProfile(uid: uid, username: username, photoURL: url)
+//                    let userProfile = UserProfile(title: title)
 //                    let post = Post(id: childSnapshot.key, author: userProfile, text: text, timestamp:timestamp)
 //                    tempPosts.append(post)
                 }
