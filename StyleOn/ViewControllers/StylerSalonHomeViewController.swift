@@ -9,9 +9,7 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
     var tableView:UITableView!
 
     var posts = [
-        Post(id: "1", author: "Ari", text: "I'm scared of hair cuts!"),
-        Post(id: "2", author: "Luke Skywalker", text: "I did not like the Last Jedi! Because I did not get to use my awesome Jedi powers!"),
-        Post(id: "3", author: "Drizzy Drake", text: "Spittin that fire while I smoke by the fire")
+        Post(id: "1", author: "Ari", text: "I'm scared of hair cuts!")
     ]
     
     // Loads current view
@@ -66,14 +64,14 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
                     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
                     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
                     print(title)
-//                    let userProfile = UserProfile(title: title)
-//                    let post = Post(id: childSnapshot.key, author: userProfile, text: text, timestamp:timestamp)
-//                    tempPosts.append(post)
+
+                    let post = Post(id: "childSnapshot.key", author: "userProfile", text: "text")
+                    tempPosts.append(post)
                 }
             }
             
 //            self.posts = tempPosts
-//            self.tableView.reloadData()
+            self.tableView.reloadData()
             
         })
     }
