@@ -71,20 +71,21 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
                 postsRef.observe(.value, with: { snapshot in
                     
                     var tempPosts = [Post]()
-                    var counter = 0
+//                    var counter = 0
+                    
                     
                     for child in snapshot.children {
                         if let childSnapshot = child as? DataSnapshot,
                             let data = childSnapshot.value as? [String:Any],
-//                            let timestamp = data["timestamp"] as? String,
+                            let timestamp = data["timestamp"] as? Double,
                             let postTitle = data["title"] as? String,
                             let postDescription = data["description"] as? String
                         {
                         
-//                        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-                            
-                            let post = Post(timestamp: String(counter), postTitle: postTitle, postDescription: postDescription)
-                         
+                            let newDate = self.getDateFromTimeStamp(timestamp:timestamp)
+                        
+                            let post = Post(timestamp: newDate, postTitle: postTitle, postDescription: postDescription)
+
                             tempPosts.append(post)
                             
 //                            for x in tempPosts{
@@ -93,7 +94,7 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
                         }
                         
                         // Counter to keep track of which post goes first, can be replaced with timestamp in future
-                        counter += 1
+//                        counter += 1
                     }
                     
                     self.posts = tempPosts
@@ -103,7 +104,17 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
     }
 
 
-
+    func getDateFromTimeStamp(timestamp : Double) -> String {
+        
+        let date = Date(timeIntervalSince1970: timestamp)
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.dateFormat = "HH:mm" //Specify your format that you want
+        let strDate = dateFormatter.string(from: date)
+        
+        return strDate
+    }
 
     
     

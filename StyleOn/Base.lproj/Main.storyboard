@@ -133,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1GV-S5-vVm">
-                                <rect key="frame" x="40" y="40" width="334" height="340"/>
+                                <rect key="frame" x="40" y="86.5" width="334" height="340"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyl-0q-Uew">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -184,12 +184,38 @@
                                     <constraint firstItem="Vfj-m4-dyb" firstAttribute="height" secondItem="nyl-0q-Uew" secondAttribute="height" id="oUI-kf-698"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10g-fe-u2d">
+                                <rect key="frame" x="186" y="434.5" width="43" height="48.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="TEi-Tj-4DO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register as User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCO-pe-fJO">
+                                <rect key="frame" x="112" y="45" width="190" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1GV-S5-vVm" firstAttribute="leading" secondItem="ngK-i0-wae" secondAttribute="leading" constant="40" id="1Dt-gy-CVY"/>
-                            <constraint firstItem="1GV-S5-vVm" firstAttribute="top" secondItem="ngK-i0-wae" secondAttribute="top" constant="40" id="1Qs-b1-rQT"/>
+                            <constraint firstItem="ngK-i0-wae" firstAttribute="trailing" secondItem="10g-fe-u2d" secondAttribute="trailing" constant="185" id="IYg-LI-Tsf"/>
+                            <constraint firstItem="HCO-pe-fJO" firstAttribute="leading" secondItem="ngK-i0-wae" secondAttribute="leading" constant="112" id="JyE-Dk-RET"/>
+                            <constraint firstItem="HCO-pe-fJO" firstAttribute="top" secondItem="ngK-i0-wae" secondAttribute="top" constant="45" id="Pk5-eh-1a4"/>
                             <constraint firstItem="ngK-i0-wae" firstAttribute="trailing" secondItem="1GV-S5-vVm" secondAttribute="trailing" constant="40" id="a3D-Xx-L2K"/>
+                            <constraint firstItem="ngK-i0-wae" firstAttribute="trailing" secondItem="HCO-pe-fJO" secondAttribute="trailing" constant="112" id="bN5-h8-8tK"/>
+                            <constraint firstItem="10g-fe-u2d" firstAttribute="leading" secondItem="ngK-i0-wae" secondAttribute="leading" constant="186" id="sU8-Jl-cd8"/>
+                            <constraint firstItem="1GV-S5-vVm" firstAttribute="top" secondItem="HCO-pe-fJO" secondAttribute="bottom" constant="8" id="vrs-az-BXg"/>
+                            <constraint firstItem="10g-fe-u2d" firstAttribute="top" secondItem="1GV-S5-vVm" secondAttribute="bottom" constant="8" id="xs1-at-n1h"/>
+                            <constraint firstItem="ngK-i0-wae" firstAttribute="bottom" secondItem="10g-fe-u2d" secondAttribute="bottom" constant="325" id="zsr-JC-gKw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ngK-i0-wae"/>
                     </view>
@@ -854,7 +880,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="xMD-EQ-7CN"/>
         <segue reference="8sy-ze-kUq"/>
-        <segue reference="Jsb-nN-nPT"/>
-        <segue reference="tD1-TL-lPM"/>
+        <segue reference="alV-7Y-V3t"/>
+        <segue reference="TEi-Tj-4DO"/>
     </inferredMetricsTieBreakers>
 </document>
