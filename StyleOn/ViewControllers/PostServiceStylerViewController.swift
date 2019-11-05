@@ -120,15 +120,14 @@ extension PostServiceStylerViewController {
     }
     
     func saveImage(name: String, postURL:URL, completion: @escaping ((_ url: URL?) -> ())){
-        
-//        let userID = Auth.auth().currentUser?.uid
-        
+                
         let dict = ["title": postDescriptionTitle.text!,
                     "description": postDescription.text!,
                     "timestamp": [".sv":"timestamp"],
                     "postUrl": postURL.absoluteString]
             as [String: Any]
         self.ref.child("post").childByAutoId().setValue(dict)
+        
     }
     
 

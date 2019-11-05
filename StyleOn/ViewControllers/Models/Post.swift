@@ -1,13 +1,13 @@
 import Foundation
 
 class Post {
-    var id:String
+    var timestamp:String
     var postTitle:String
-    var text:String
+    var postDescription:String
     
-    init(id:String, postTitle:String, text:String) {
-        self.id = id
+    init(timestamp:String, postTitle:String, postDescription:String) {
+        self.timestamp = timestamp
         self.postTitle = postTitle
-        self.text = text
+        self.postDescription = postDescription
     }
 }

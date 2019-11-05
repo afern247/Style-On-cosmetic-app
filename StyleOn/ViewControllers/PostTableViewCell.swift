@@ -27,7 +27,8 @@ class PostTableViewCell: UITableViewCell {
     func set(post:Post) {
         
         postTitle.text = post.postTitle
-        postTextLabel.text = post.text
+        postTextLabel.text = post.postDescription
+//        postsImageView.text = post.postUrl
     }
     
 
