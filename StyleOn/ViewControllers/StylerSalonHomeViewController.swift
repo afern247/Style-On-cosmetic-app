@@ -73,18 +73,20 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
                     
                     for child in snapshot.children {
                         if let childSnapshot = child as? DataSnapshot,
-                            let dict = childSnapshot.value as? [String:Any],
+                            let data = childSnapshot.value as? [String:Any],
 //                            let id = dict["timestamp"] as? String,
-                            let postTitle = dict["title"] as? String
+                            let postTitle = data["title"] as? String,
+                            let postDescription = data["description"] as? String
                         {
-                            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                        
+                        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 
-                            let post = Post(id: "asd", postTitle: postTitle, text: "text")
+                            let post = Post(id: "asd", postTitle: postTitle, text: postDescription)
                          
                             tempPosts.append(post)
                             
                             for x in tempPosts{
-                                print(x.postTitle)
+                                print(x.text)
                             }
                         }
                     }
