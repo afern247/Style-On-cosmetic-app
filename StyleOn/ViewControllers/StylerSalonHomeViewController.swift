@@ -8,11 +8,7 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
     // Instantiate table view to post content
     var tableView:UITableView!
 
-    var posts = [
-    Post(id: "1", author: "Ari", text: "I'm scared of hair cuts!"),
-    Post(id: "2", author: "Luke Skywalker", text: "I did not like the Last Jedi! Because I did not get to use my awesome Jedi powers!"),
-    Post(id: "3", author: "Drizzy Drake", text: "Spittin that fire while I smoke by the fire")
-    ]
+    var posts = [Post]()
     
     // Loads current view
     override func viewDidLoad() {
@@ -78,27 +74,21 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
                     for child in snapshot.children {
                         if let childSnapshot = child as? DataSnapshot,
                             let dict = childSnapshot.value as? [String:Any],
-        //                    let author = dict["author"] as? [String:Any],
-        //                    let uid = author["uid"] as? String,
-        //                    let username = author["username"] as? String,
-        //                    let photoURL = author["photoURL"] as? String,
-        //                    let url = URL(string:photoURL),
                             let title = dict["title"] as? String
-        //                    let timestamp = dict["timestamp"] as? Double
                         {
                             print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-                            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-        //                    print(title)
 
                             let post = Post(id: title, author: title, text: "text")
-                            
-                            print(post.id)
                          
                             tempPosts.append(post)
+                            
+                            for x in tempPosts{
+                                print(x.id)
+                            }
                         }
                     }
                     
-        //            self.posts = tempPosts
+                    self.posts = tempPosts
                     self.tableView.reloadData()
                     
                 })
