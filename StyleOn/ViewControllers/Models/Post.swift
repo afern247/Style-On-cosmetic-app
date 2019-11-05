@@ -2,12 +2,12 @@ import Foundation
 
 class Post {
     var id:String
-    var author:String
+    var postTitle:String
     var text:String
     
-    init(id:String, author:String,text:String) {
+    init(id:String, postTitle:String, text:String) {
         self.id = id
-        self.author = author
+        self.postTitle = postTitle
         self.text = text
     }
 }
