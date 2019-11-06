@@ -13,10 +13,12 @@ class PostServiceStylerViewController: UIViewController, CLLocationManagerDelega
     let imagePicker = UIImagePickerController()
     
     @IBOutlet var postImageView: UIImageView!
-
     @IBOutlet var postDescriptionTitle: UITextField!
+    @IBOutlet weak var postDescription: UITextView!
+    @IBOutlet weak var addressField: UITextField!
+    @IBOutlet weak var zipcodeField: UITextField!
     
-    @IBOutlet var postDescription: UITextField!
+    
     
     var selectedImage: UIImage?
     
@@ -40,6 +42,10 @@ class PostServiceStylerViewController: UIViewController, CLLocationManagerDelega
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleSelectPhoto))
         postImageView.addGestureRecognizer(tapGesture)
         postImageView.isUserInteractionEnabled = true
+        
+        // This sets the properties of the description view text field
+        postDescription.layer.borderWidth = 1.0
+        postDescription.layer.borderColor = UIColor.lightGray.cgColor
 
     }
     
@@ -123,6 +129,8 @@ extension PostServiceStylerViewController {
                 
         let dict = ["title": postDescriptionTitle.text!,
                     "description": postDescription.text!,
+                    "Address": addressField.text!,
+                    "Zipcode": zipcodeField.text!,
                     "timestamp": [".sv":"timestamp"],
                     "postUrl": postURL.absoluteString]
             as [String: Any]
