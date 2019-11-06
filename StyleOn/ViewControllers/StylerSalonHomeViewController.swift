@@ -79,19 +79,24 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
                             let data = childSnapshot.value as? [String:Any],
                             let timestamp = data["timestamp"] as? Double,
                             let postTitle = data["title"] as? String,
-                            let postDescription = data["description"] as? String
+                            let postDescription = data["description"] as? String,
+                            let postUrl = data["postUrl"] as? String,
+                            let url = URL(string:postUrl)
                         {
                         
+                            // Convert timestamp to date
                             let newDate = self.getDateFromTimeStamp(timestamp:timestamp)
                         
-                            let post = Post(timestamp: newDate, postTitle: postTitle, postDescription: postDescription)
+                            // Store variables from DB into post
+                            let post = Post(timestamp: newDate, postTitle: postTitle, postDescription: postDescription, postUrl: url)
 
                             tempPosts.append(post)
                             
 //                            for x in tempPosts{
-//                                print(x.timestamp)
+//                                print(x.postUrl)
 //                            }
                         }
+                        
                         
                         // Counter to keep track of which post goes first, can be replaced with timestamp in future
 //                        counter += 1

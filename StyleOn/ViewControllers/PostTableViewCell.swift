@@ -26,12 +26,13 @@ class PostTableViewCell: UITableViewCell {
     
     func set(post:Post) {
         
+        ImageService.getImage(withURL: post.postUrl) { image in
+            self.postsImageView.image = image
+        }
+        
         postTitle.text = post.postTitle
         subtitleLabel.text = post.timestamp
         postTextLabel.text = post.postDescription
-//        postsImageView.text = post.postUrl
     }
-    
-
     
 }
