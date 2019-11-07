@@ -71,13 +71,12 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
                 postsRef.observe(.value, with: { snapshot in
                     
                     var tempPosts = [Post]()
-//                    var counter = 0
-                    
                     
                     for child in snapshot.children {
                         if let childSnapshot = child as? DataSnapshot,
                             let data = childSnapshot.value as? [String:Any],
-                            let timestamp = data["timestamp"] as? Double,
+//                            let timestamp = data["timestamp"] as? Double,
+                            let first_name = data["Author"] as? String,
                             let postTitle = data["title"] as? String,
                             let postDescription = data["description"] as? String,
                             let postUrl = data["postUrl"] as? String,
@@ -85,21 +84,15 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
                         {
                         
                             // Convert timestamp to date
-                            let newDate = self.getDateFromTimeStamp(timestamp:timestamp)
+//                            let newDate = self.getDateFromTimeStamp(timestamp:timestamp)
                         
                             // Store variables from DB into post
-                            let post = Post(timestamp: newDate, postTitle: postTitle, postDescription: postDescription, postUrl: url)
+                            let post = Post(timestamp: first_name, postTitle: postTitle, postDescription: postDescription, postUrl: url)
 
                             tempPosts.append(post)
                             
-//                            for x in tempPosts{
-//                                print(x.postUrl)
-//                            }
                         }
                         
-                        
-                        // Counter to keep track of which post goes first, can be replaced with timestamp in future
-//                        counter += 1
                     }
                     
                     self.posts = tempPosts
