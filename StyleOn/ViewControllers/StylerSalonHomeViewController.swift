@@ -87,7 +87,7 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
 //                            let newDate = self.getDateFromTimeStamp(timestamp:timestamp)
                         
                             // Store variables from DB into post
-                            let post = Post(timestamp: first_name, postTitle: postTitle, postDescription: postDescription, postUrl: url)
+                            let post = Post(author: first_name, postTitle: postTitle, postDescription: postDescription, postUrl: url)
 
                             tempPosts.append(post)
                             

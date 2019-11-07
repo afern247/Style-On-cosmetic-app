@@ -31,7 +31,7 @@ class PostTableViewCell: UITableViewCell {
         }
         
         postTitle.text = post.postTitle
-        subtitleLabel.text = post.timestamp
+        subtitleLabel.text = post.author
         postTextLabel.text = post.postDescription
     }
     
