@@ -1,5 +1,7 @@
 import UIKit
 import Firebase
+import FirebaseAuth
+import Foundation
 import FirebaseStorage
 import FirebaseDatabase
 import CoreLocation
@@ -7,6 +9,9 @@ import CoreLocation
 class PostServiceStylerViewController: UIViewController, CLLocationManagerDelegate {
     
     var ref: DatabaseReference!
+    
+    // Access database from firestore
+    let db = Firestore.firestore()
     
     let locationManager = CLLocationManager()
     
@@ -18,9 +23,13 @@ class PostServiceStylerViewController: UIViewController, CLLocationManagerDelega
     @IBOutlet weak var addressField: UITextField!
     @IBOutlet weak var zipcodeField: UITextField!
     
-    
-    
     var selectedImage: UIImage?
+    
+    // This override function allows the keyboard to be dismissed once we click outside of any text field
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
     
     override func viewDidLoad() {
         
@@ -46,7 +55,7 @@ class PostServiceStylerViewController: UIViewController, CLLocationManagerDelega
         // This sets the properties of the description view text field
         postDescription.layer.borderWidth = 1.0
         postDescription.layer.borderColor = UIColor.lightGray.cgColor
-
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -86,7 +95,7 @@ class PostServiceStylerViewController: UIViewController, CLLocationManagerDelega
         }
     }
 
-//This method takes care of secting the image from library
+//This method takes care of selecting the image from library
 extension PostServiceStylerViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -104,7 +113,8 @@ extension PostServiceStylerViewController: UIImagePickerControllerDelegate, UINa
 
     }
 }
-///this handles the image
+
+// This handles the image
 extension PostServiceStylerViewController {
 
     func uploadImage(_ image:UIImage, completion: @escaping (_ url: URL?) -> ()){
@@ -125,19 +135,49 @@ extension PostServiceStylerViewController {
         }
     }
     
+    // This function uploads the image to the DB
     func saveImage(name: String, postURL:URL, completion: @escaping ((_ url: URL?) -> ())){
-                
-        let dict = ["title": postDescriptionTitle.text!,
-                    "description": postDescription.text!,
-                    "Address": addressField.text!,
-                    "Zipcode": zipcodeField.text!,
-                    "timestamp": [".sv":"timestamp"],
-                    "postUrl": postURL.absoluteString]
-            as [String: Any]
-        self.ref.child("post").childByAutoId().setValue(dict)
         
+        //Get sspecific document from current user
+        let docRef = Firestore.firestore().collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
+
+        // Get data
+        docRef.getDocuments { (querySnapshot, err) in
+            
+            if let err = err {
+                print("ERROR: ")
+                print(err.localizedDescription)
+                return
+            } else if querySnapshot!.documents.count != 1 {
+                print("More than one documents or none")
+            } else {
+                let document = querySnapshot!.documents.first
+                let dataDescription = document?.data()
+                let firstName = dataDescription?["firstname"] as! String
+//                print("This is from DB directly " , dataDescription?["firstname"] as! String)
+                
+                
+                // This uploads the data
+                let dict = ["title": self.postDescriptionTitle.text!,
+                            "description": self.postDescription.text!,
+                            "Address": self.addressField.text!,
+                            "Zipcode": self.zipcodeField.text!,
+                            "timestamp": [".sv":"timestamp"],
+                            "Author": firstName,
+                            "postUrl": postURL.absoluteString]
+                            as [String: Any]
+                        self.ref.child("post").childByAutoId().setValue(dict)
+                
+            }
+        }        
     }
     
 
 
+        
+    
+    
+    
+
 }
+
