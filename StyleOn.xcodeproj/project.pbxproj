@@ -13,6 +13,7 @@
 		69A936D4236CF94400E6CA62 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A936D3236CF94400E6CA62 /* Post.swift */; };
 		69EA9E5B2375CE6500548125 /* UserPostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EA9E592375CE6500548125 /* UserPostViewCell.swift */; };
 		69EA9E5C2375CE6500548125 /* UserPostViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69EA9E5A2375CE6500548125 /* UserPostViewCell.xib */; };
+		69EA9E5E2376019500548125 /* UserPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EA9E5D2376019500548125 /* UserPosts.swift */; };
 		CC5F61A5234EAE1A00129E8C /* StylerSalonHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F61A4234EAE1A00129E8C /* StylerSalonHomeViewController.swift */; };
 		CC5F61AC235FCAE800129E8C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F61AA235FCAE800129E8C /* PostTableViewCell.swift */; };
 		CC5F61AD235FCAE800129E8C /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5F61AB235FCAE800129E8C /* PostTableViewCell.xib */; };
@@ -62,6 +63,7 @@
 		69A936D3236CF94400E6CA62 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		69EA9E592375CE6500548125 /* UserPostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostViewCell.swift; sourceTree = "<group>"; };
 		69EA9E5A2375CE6500548125 /* UserPostViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPostViewCell.xib; sourceTree = "<group>"; };
+		69EA9E5D2376019500548125 /* UserPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPosts.swift; sourceTree = "<group>"; };
 		6AB5F29B9257F385DD4B60AC /* Pods-StyleOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleOn.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleOn/Pods-StyleOn.release.xcconfig"; sourceTree = "<group>"; };
 		BF38A971EFEB1C74D8EE3B27 /* Pods_StyleOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StyleOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5F61A4234EAE1A00129E8C /* StylerSalonHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylerSalonHomeViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				69A936D3236CF94400E6CA62 /* Post.swift */,
+				69EA9E5D2376019500548125 /* UserPosts.swift */,
 				6945CC1B2370B6DA00A56C22 /* UserProfile.swift */,
 			);
 			path = Models;
@@ -407,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD95EB12329B61500CD9FC4 /* SignUpStylerViewController.swift in Sources */,
+				69EA9E5E2376019500548125 /* UserPosts.swift in Sources */,
 				CC5FD1222347F0D60098D287 /* PostServiceStylerViewController.swift in Sources */,
 				CC5F61A5234EAE1A00129E8C /* StylerSalonHomeViewController.swift in Sources */,
 				CC5FD11123452FAD0098D287 /* UserSalonViewController.swift in Sources */,

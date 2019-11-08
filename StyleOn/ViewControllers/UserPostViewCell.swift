@@ -16,8 +16,20 @@ class UserPostViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    func set(userPost:UserPosts) {
+        
+        ImageService.getImage(withURL: userPost.postUrl) { image in
+            self.postImage.image = image
+        }
+        
+        postTitle.text = userPost.postTitle
+        stylerName.text = userPost.author
+        postDescription.text = userPost.postDescription
+        postAddress.text = userPost.postAddress
+    }
+
+    
 }
+
