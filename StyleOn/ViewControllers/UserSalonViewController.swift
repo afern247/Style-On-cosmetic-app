@@ -27,7 +27,7 @@ class UserSalonViewController: UIViewController, UITableViewDelegate, UITableVie
 
         tableView = UITableView(frame: view.bounds, style: .plain)
         
-        let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
+        let cellNib = UINib(nibName: "UserPostViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "postCell")
         
         view.addSubview(tableView)
@@ -65,11 +65,15 @@ class UserSalonViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! UserPostViewCell
 //        cell.set(post: posts[indexPath.row])
         return cell
     }
     
+    internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
+            return 250
+    }
     
     
     
