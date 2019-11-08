@@ -13,3 +13,4 @@ class Post {
         self.postUrl = postUrl
     }
 }
+
