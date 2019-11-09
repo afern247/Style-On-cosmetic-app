@@ -88,6 +88,8 @@ class PostServiceStylerViewController: UIViewController, CLLocationManagerDelega
                 {
                     // Fix this because doesn't work
                     print("Yeah")
+                } else {
+                    print("ERROR")
                 }
             }
         }
