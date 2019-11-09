@@ -6,7 +6,10 @@ import Foundation
 class UserSalonViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // This is the view to display all posts from all Authors
-    var tableView:UITableView!
+    @IBOutlet var allPostsTableView: UITableView!
+    
+    
+
     
     //    var posts = [UserPosts]()
     
@@ -18,40 +21,32 @@ class UserSalonViewController: UIViewController, UITableViewDelegate, UITableVie
             postUrl: URL(string: "https://duckduckgo.com/")!,
             postAddress: "1 NW 1 ave"
             ),
+        UserPosts(
+            author: "Perikito",
+            postTitle: "Hello World 2",
+            postDescription: "First Post",
+            postUrl: URL(string: "https://duckduckgo.com/")!,
+            postAddress: "1 NW 1 ave"
+            ),
     ]
+    
+    
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView = UITableView(frame: view.bounds, style: .plain)
         
         let cellNib = UINib(nibName: "UserPostViewCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "postCell")
+        allPostsTableView.register(cellNib, forCellReuseIdentifier: "postCell")
         
-        view.addSubview(tableView)
-        
-        var layoutGuide:UILayoutGuide
-        
-        if #available(iOS 11.0, *){
-            layoutGuide = view.safeAreaLayoutGuide
-        }
-        
-        layoutGuide = view.safeAreaLayoutGuide
-        
-        tableView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor).isActive = true
-        tableView.topAnchor.constraint(equalTo: layoutGuide.topAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor).isActive = true
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.tableFooterView = UIView()
+        allPostsTableView.delegate = self
+        allPostsTableView.dataSource = self
+        allPostsTableView.tableFooterView = UIView()
         
 //        observe()
         
-        tableView.reloadData()
+        allPostsTableView.reloadData()
         
     }
     
@@ -60,13 +55,12 @@ class UserSalonViewController: UIViewController, UITableViewDelegate, UITableVie
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return posts.count
-        return 12
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! UserPostViewCell
-//        cell.set(post: posts[indexPath.row])
+        cell.set(userPost: posts[indexPath.row])
         return cell
     }
     
