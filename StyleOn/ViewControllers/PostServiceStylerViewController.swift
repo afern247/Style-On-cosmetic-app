@@ -64,13 +64,13 @@ class PostServiceStylerViewController: UIViewController, CLLocationManagerDelega
         }
     }
     
-    //This fuction puts the data into Firebase
-    @IBAction func postDidTap(_ sender: Any) {
-        
+    
+    
+    
+    @IBAction func PostdidTap(_ sender: Any) {
         self.saveFIRData()
         
     }
-    
     //This function handle the selected photo
     @objc func handleSelectPhoto(){
         
@@ -79,11 +79,11 @@ class PostServiceStylerViewController: UIViewController, CLLocationManagerDelega
         present(pickerController, animated: true, completion: nil)
         
     }
-    
-    //This fuction add the data to the databse
+ 
     func saveFIRData(){
         self.uploadImage(self.postImageView.image!){ url in
-            self.saveImage(name: self.postDescription.text!, postURL: url!) { success in
+            if self.postDescription.text != nil && url != nil{
+                self.saveImage(name: self.postDescription.text!, postURL: url!) { success in
                 if success != nil
                 {
                     // Fix this because doesn't work
@@ -96,6 +96,7 @@ class PostServiceStylerViewController: UIViewController, CLLocationManagerDelega
 
         }
     }
+}
 
 //This method takes care of selecting the image from library
 extension PostServiceStylerViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

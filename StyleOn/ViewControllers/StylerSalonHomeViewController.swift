@@ -58,6 +58,12 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
         return cell
     }
     
+    internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
+             return 180
+     }
+    
+    
     
     @IBAction func handleLogout(_ target: UIBarButtonItem) {
         try! Auth.auth().signOut()
@@ -80,6 +86,7 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
                             let postTitle = data["title"] as? String,
                             let postDescription = data["description"] as? String,
                             let postUrl = data["postUrl"] as? String,
+                            let postAddress = data["Address"] as? String,
                             let url = URL(string:postUrl)
                         {
                         
@@ -87,7 +94,7 @@ class StylerSalonHomeViewController: UIViewController, UITableViewDelegate, UITa
 //                            let newDate = self.getDateFromTimeStamp(timestamp:timestamp)
                         
                             // Store variables from DB into post
-                            let post = Post(author: first_name, postTitle: postTitle, postDescription: postDescription, postUrl: url)
+                            let post = Post(author: first_name, postTitle: postTitle, postDescription: postDescription, postUrl: url, postAddress: postAddress)
 
                             tempPosts.append(post)
                             
