@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xf9-tu-UmF">
                         <rect key="frame" x="1" y="1" width="262" height="249"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JOe-o3-0vv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JOe-o3-0vv">
                                 <rect key="frame" x="0.0" y="0.0" width="262" height="133"/>
                                 <color key="backgroundColor" red="0.13048201800000001" green="0.6330468655" blue="0.60194122790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
