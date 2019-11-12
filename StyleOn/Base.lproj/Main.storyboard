@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -800,22 +801,52 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.88176820937752132" green="0.88176820937752132" blue="0.88176820937752132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Grc-RG-bJ7">
+                                <rect key="frame" x="0.0" y="575" width="414" height="238"/>
+                                <color key="backgroundColor" red="0.95260053870000005" green="0.96467989679999999" blue="0.96458631750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="1" minimumInteritemSpacing="1" id="CNM-E9-PjF">
+                                    <size key="itemSize" width="378" height="229"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="9" minY="6" maxX="0.0" maxY="6"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZqR-Cl-Cop">
+                                        <rect key="frame" x="9" y="6" width="378" height="226"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VAL-m8-pG7">
+                                            <rect key="frame" x="0.0" y="0.0" width="378" height="226"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="378" height="226"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="5VF-vj-s2H" id="Ng7-74-aGW"/>
+                                    <outlet property="delegate" destination="5VF-vj-s2H" id="Bdg-kI-M1i"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.95382270902809796" green="0.96326649822639587" blue="0.96326649822639587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="f7k-jA-sba" firstAttribute="top" secondItem="hUj-VP-g9T" secondAttribute="top" id="D6k-pH-Xl2"/>
                             <constraint firstItem="hUj-VP-g9T" firstAttribute="trailing" secondItem="I9W-tn-HoQ" secondAttribute="trailing" constant="80" id="Gcf-tj-JMM"/>
+                            <constraint firstItem="Grc-RG-bJ7" firstAttribute="trailing" secondItem="hUj-VP-g9T" secondAttribute="trailing" id="Ibb-Ij-zTN"/>
                             <constraint firstItem="hUj-VP-g9T" firstAttribute="bottom" secondItem="I9W-tn-HoQ" secondAttribute="bottom" constant="246" id="Xan-6Z-Oqi"/>
                             <constraint firstItem="f7k-jA-sba" firstAttribute="leading" secondItem="hUj-VP-g9T" secondAttribute="leading" id="Ya6-lT-uRF"/>
+                            <constraint firstItem="Grc-RG-bJ7" firstAttribute="leading" secondItem="hUj-VP-g9T" secondAttribute="leading" id="hUr-6B-q1O"/>
                             <constraint firstItem="I9W-tn-HoQ" firstAttribute="top" secondItem="f7k-jA-sba" secondAttribute="bottom" constant="8" id="kzW-HK-eWq"/>
                             <constraint firstItem="hUj-VP-g9T" firstAttribute="bottom" secondItem="f7k-jA-sba" secondAttribute="bottom" constant="296" id="out-ig-Cqu"/>
                             <constraint firstItem="f7k-jA-sba" firstAttribute="trailing" secondItem="hUj-VP-g9T" secondAttribute="trailing" id="s5F-0x-EKp"/>
+                            <constraint firstItem="Grc-RG-bJ7" firstAttribute="top" secondItem="I9W-tn-HoQ" secondAttribute="bottom" constant="8" id="s5f-3j-Gjl"/>
                             <constraint firstItem="I9W-tn-HoQ" firstAttribute="leading" secondItem="hUj-VP-g9T" secondAttribute="leading" constant="80" id="sge-0m-asG"/>
+                            <constraint firstItem="Grc-RG-bJ7" firstAttribute="bottom" secondItem="hUj-VP-g9T" secondAttribute="bottom" id="yh5-EB-haT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hUj-VP-g9T"/>
                     </view>
                     <navigationItem key="navigationItem" title="Salon" id="shv-AN-k8U">
                         <barButtonItem key="rightBarButtonItem" title="LogOut" id="yta-HW-d9Z">
+                            <color key="tintColor" red="0.0" green="0.84565395119999998" blue="0.79054552320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="tD1-TL-lPM"/>
                             </connections>
@@ -824,6 +855,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="allPostsTableView" destination="f7k-jA-sba" id="fYb-K6-DUF"/>
+                        <outlet property="featuredPostsCollectionView" destination="Grc-RG-bJ7" id="Vun-qw-M9W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMw-Lq-v1E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
