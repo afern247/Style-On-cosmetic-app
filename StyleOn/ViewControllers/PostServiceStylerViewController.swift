@@ -22,6 +22,8 @@ class PostServiceStylerViewController: UIViewController, CLLocationManagerDelega
     @IBOutlet weak var postDescription: UITextView!
     @IBOutlet weak var addressField: UITextField!
     @IBOutlet weak var zipcodeField: UITextField!
+    @IBOutlet weak var tagField: UITextField!
+    
     
     var selectedImage: UIImage?
     
@@ -121,7 +123,8 @@ extension PostServiceStylerViewController: UIImagePickerControllerDelegate, UINa
 extension PostServiceStylerViewController {
 
     func uploadImage(_ image:UIImage, completion: @escaping (_ url: URL?) -> ()){
-        let storageRef = Storage.storage().reference().child("myimage.png")
+        let imgTitle = self.postDescriptionTitle.text!
+        let storageRef = Storage.storage().reference().child(imgTitle)
         let imgData = postImageView.image?.pngData()
         let metaData = StorageMetadata()
         metaData.contentType = "image/png"
@@ -161,13 +164,14 @@ extension PostServiceStylerViewController {
                 
                 
                 // This uploads the data
-                let dict = ["title": self.postDescriptionTitle.text!,
-                            "description": self.postDescription.text!,
+                let dict = ["Title": self.postDescriptionTitle.text!,
+                            "Description": self.postDescription.text!,
                             "Address": self.addressField.text!,
                             "Zipcode": self.zipcodeField.text!,
-                            "timestamp": [".sv":"timestamp"],
+                            "Tag": self.tagField.text!,
+                            "Timestamp": [".sv":"timestamp"],
                             "Author": firstName,
-                            "postUrl": postURL.absoluteString]
+                            "PostUrl": postURL.absoluteString]
                             as [String: Any]
                         self.ref.child("post").childByAutoId().setValue(dict)
                 

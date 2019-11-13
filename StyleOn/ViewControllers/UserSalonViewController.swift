@@ -5,7 +5,6 @@ import Foundation
 
 class UserSalonViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    
     // This is the view to display all posts from all Authors
     @IBOutlet var allPostsTableView: UITableView!
     @IBOutlet weak var featuredPostsCollectionView: UICollectionView!
@@ -60,14 +59,12 @@ class UserSalonViewController: UIViewController, UITableViewDelegate, UITableVie
                             let data = childSnapshot.value as? [String:Any],
     //                           let timestamp = data["timestamp"] as? Double,
                             let first_name = data["Author"] as? String,
-                            let postTitle = data["title"] as? String,
+                            let postTitle = data["Title"] as? String,
                             let post_address = data["Address"] as? String,
-                            let postDescription = data["description"] as? String,
-                            let postUrl = data["postUrl"] as? String,
+                            let postDescription = data["Description"] as? String,
+                            let postUrl = data["PostUrl"] as? String,
                             let url = URL(string:postUrl)
                         {
-                            // Convert timestamp to date
-    //                      let newDate = self.getDateFromTimeStamp(timestamp:timestamp)
 
                                 // Store variables from DB into post
                             let post = UserPosts(author: first_name, postTitle: postTitle, postDescription: postDescription, postUrl: url, postAddress: post_address)
@@ -129,29 +126,6 @@ class UserSalonViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
         
-    
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
-//    }
-
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let collectionViewWidth = collectionView.bounds.width
-//        return CGSize(width: collectionViewWidth/3, height: collectionViewWidth/3)
-//    }
-
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 20
-//    }
-    
-    
-    
-    
-    
-
     
     
 }
