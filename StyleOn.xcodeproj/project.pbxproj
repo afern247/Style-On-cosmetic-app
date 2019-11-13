@@ -83,7 +83,7 @@
 		CC5FD11A234530C20098D287 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		CC5FD11C234530E10098D287 /* StylerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylerProfileViewController.swift; sourceTree = "<group>"; };
 		CC5FD1212347F0D60098D287 /* PostServiceStylerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServiceStylerViewController.swift; sourceTree = "<group>"; };
-		CCD95E822329A83000CD9FC4 /* StyleOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCD95E822329A83000CD9FC4 /* Style-On.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Style-On.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD95E852329A83000CD9FC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCD95E872329A83000CD9FC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CCD95E8A2329A83000CD9FC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		CCD95E832329A83000CD9FC4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCD95E822329A83000CD9FC4 /* StyleOn.app */,
+				CCD95E822329A83000CD9FC4 /* Style-On.app */,
 				CCD95E962329A83200CD9FC4 /* StyleOnTests.xctest */,
 			);
 			name = Products;
@@ -266,7 +266,7 @@
 			);
 			name = StyleOn;
 			productName = StyleOn;
-			productReference = CCD95E822329A83000CD9FC4 /* StyleOn.app */;
+			productReference = CCD95E822329A83000CD9FC4 /* Style-On.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CCD95E952329A83200CD9FC4 /* StyleOnTests */ = {
@@ -609,16 +609,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DX7B5A2XU3;
+				DEVELOPMENT_TEAM = SGD4KVQ476;
 				INFOPLIST_FILE = StyleOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ramses.StyleOn;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = beta.StyleOn;
+				PRODUCT_NAME = "Style-On";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -628,16 +628,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DX7B5A2XU3;
+				DEVELOPMENT_TEAM = SGD4KVQ476;
 				INFOPLIST_FILE = StyleOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ramses.StyleOn;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = beta.StyleOn;
+				PRODUCT_NAME = "Style-On";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
