@@ -380,10 +380,9 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="-1" height="-1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWu-bz-npF">
-                                <rect key="frame" x="124" y="222" width="167" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWu-bz-npF">
+                                <rect key="frame" x="124" y="256" width="166" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
@@ -399,15 +398,18 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Bie-Tb-Evg" firstAttribute="bottom" secondItem="lx1-9j-oPZ" secondAttribute="bottom" constant="300" id="ChQ-En-J3b"/>
                             <constraint firstItem="Bie-Tb-Evg" firstAttribute="trailing" secondItem="lx1-9j-oPZ" secondAttribute="trailing" constant="40" id="EvP-de-BMX"/>
+                            <constraint firstItem="RWu-bz-npF" firstAttribute="leading" secondItem="Bie-Tb-Evg" secondAttribute="leading" constant="124" id="HwP-hL-q6V"/>
                             <constraint firstItem="Bie-Tb-Evg" firstAttribute="trailing" secondItem="5zy-8f-wTE" secondAttribute="trailing" constant="72" id="NQb-ic-xcl"/>
                             <constraint firstItem="lx1-9j-oPZ" firstAttribute="leading" secondItem="Bie-Tb-Evg" secondAttribute="leading" constant="40" id="YFu-xy-xWU"/>
                             <constraint firstItem="bLi-BH-sz1" firstAttribute="top" secondItem="5zy-8f-wTE" secondAttribute="bottom" constant="8" id="hAZ-EN-2bH"/>
+                            <constraint firstItem="lx1-9j-oPZ" firstAttribute="top" secondItem="RWu-bz-npF" secondAttribute="bottom" constant="20" id="kAf-0Z-yDO"/>
                             <constraint firstItem="Bie-Tb-Evg" firstAttribute="trailing" secondItem="bLi-BH-sz1" secondAttribute="trailing" constant="137" id="oad-7q-uJU"/>
                             <constraint firstItem="5zy-8f-wTE" firstAttribute="leading" secondItem="Bie-Tb-Evg" secondAttribute="leading" constant="72" id="uWn-eq-dLJ"/>
+                            <constraint firstItem="Bie-Tb-Evg" firstAttribute="trailing" secondItem="RWu-bz-npF" secondAttribute="trailing" constant="124" id="vQS-wt-Nr9"/>
                             <constraint firstItem="Bie-Tb-Evg" firstAttribute="bottom" secondItem="5zy-8f-wTE" secondAttribute="bottom" constant="180" id="xOm-AQ-xZs"/>
                             <constraint firstItem="bLi-BH-sz1" firstAttribute="leading" secondItem="Bie-Tb-Evg" secondAttribute="leading" constant="137" id="xSv-pO-4hj"/>
                         </constraints>
