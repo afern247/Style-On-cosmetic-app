@@ -37,7 +37,8 @@ class SignUpStylerViewController: UIViewController {
 
     }
     
-
+    
+    
     //Check the fields and validate taht the data is correct. If everything is correct, this method returns //nilotherwise it returns the error message
     func validateFields() -> String? {
 
@@ -45,13 +46,13 @@ class SignUpStylerViewController: UIViewController {
         if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            phoneNumber.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
 
             return "Please fill in all fields"
         }
 
         // Check if the password is secure
-        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cleanedPassword = phoneNumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 
         if Utilities.isPasswordValid(cleanedPassword) == false {
             // Password isn't secure enough
@@ -77,8 +78,8 @@ class SignUpStylerViewController: UIViewController {
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let phone_number = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let phone_number = phoneNumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = phoneNumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 
             //Create the user
             Auth.auth().createUserAndRetrieveData(withEmail: email, password: password) { (result, err) in
@@ -114,9 +115,13 @@ class SignUpStylerViewController: UIViewController {
         errorLabel.alpha = 1
     }
 
+
     func transitionToHome(){
         
-        self.performSegue(withIdentifier: "loginStylerSegue", sender: nil)
+        let salonViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.stylerSalonViewController) as? StylerSalonViewController
+
+        view.window?.rootViewController = salonViewController
+        view.window?.makeKeyAndVisible()
     }
 
 }

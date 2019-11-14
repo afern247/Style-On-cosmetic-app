@@ -5,15 +5,10 @@ import Firebase
 class SignUpViewController: UIViewController {
     
     @IBOutlet var lastNameTextField: UITextField!
-    
     @IBOutlet var passwordTextField: UITextField!
-    
     @IBOutlet var emailTextField: UITextField!
-    
     @IBOutlet var firstNameTextField: UITextField!
-    
     @IBOutlet var RoundButtonSignUpUser: UIButton!
-    
     @IBOutlet var errorLabel: UILabel!
     
     override func viewDidLoad() {
@@ -119,7 +114,10 @@ class SignUpViewController: UIViewController {
     
     func transitionToHome(){
         
-        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+        let salonViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.userSalonViewController) as? UserSearchSalonsViewController
+        
+        view.window?.rootViewController = salonViewController
+        view.window?.makeKeyAndVisible()
     }
     
 }
