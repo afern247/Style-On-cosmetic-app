@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'macos-latest'
+  vmImage: 'macOS-10.13'
 
 steps:
 - task: CocoaPods@0
@@ -16,8 +16,10 @@ steps:
 - task: Xcode@5
   inputs:
     actions: 'build'
-    scheme: 'StyleOn'
-    sdk: 'iphoneos'
-    configuration: 'Release'
+    scheme: '$(scheme)'
+    sdk: '$(sdk)'
+    configuration: '$(configuration)'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
-    xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
+    xcodeVersion: 'default' # Options: default, 10, 9, 8, specifyPath
+    exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
+    packageApp: false
