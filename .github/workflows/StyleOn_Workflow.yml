@@ -24,14 +24,8 @@ jobs:
       strategy:
           matrix:
             destination: ['platform=iOS Simulator,OS=12.4,name=iPhone 11 Pro Max']
-
-      # steps:
-      #   - name: Checkout
-      #     uses: actions/checkout@Development
-      #   - name: Run tests
-      #     run: swift test -v
-
-      before_script: cd Style-On-cosmetic-app
-
-      script:
-        - xcodebuild clean test -project StyleOn.xcodeproj -scheme StyleOn -destination "$DESTINATION" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+      steps:
+        - name: Checkout
+          uses: actions/checkout@Development
+        - name: Run tests
+          run: swift test -v
