@@ -1,0 +1,28 @@
+name: StyleOn_Workflow
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        destination: ['platform=iOS Simulator,OS=12.4,name=iPhone 11 Pro Max']
+
+    steps:
+    - uses: actions/checkout@Development
+    - name: Build
+      run: swift build -v
+
+  test:
+      name: Test
+      runs-on: macOS-latest
+      strategy:
+          matrix:
+            destination: ['platform=iOS Simulator,OS=12.4,name=iPhone 11 Pro Max']
+      steps:
+        - name: Checkout
+          uses: actions/checkout@Development
+        - name: Run tests
+          run: swift test -v
