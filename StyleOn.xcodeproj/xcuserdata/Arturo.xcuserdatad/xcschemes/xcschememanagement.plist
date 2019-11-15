@@ -3,6 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
+	<dict>
+		<key>StyleOn.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+		</dict>
+		<key>StyleOnTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
 	<dict/>
 </dict>
 </plist>
