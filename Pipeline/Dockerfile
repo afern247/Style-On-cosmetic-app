@@ -1,6 +1,6 @@
 FROM swift:5.0
 USER root
-LABEL "com.github.actions.name"="StyleOn-GitHubAction"
+LABEL "com.github.actions.name"="SwiftPM-GitHubAction"
 LABEL "com.github.actions.description"="CI/CD Swift Packages with Github Actions"
 LABEL "com.github.actions.icon"="airplay"
 LABEL "com.github.actions.color"="orange"
