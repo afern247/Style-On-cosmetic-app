@@ -11,7 +11,7 @@ jobs:
         destination: ['platform=iOS Simulator,OS=12.4,name=iPhone 11 Pro Max']
 
     steps:
-    - uses: actions/checkout@Development
+    - uses: actions/checkout@master
     - name: Build
       run: swift build -v
 
