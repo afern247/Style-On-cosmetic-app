@@ -32,10 +32,6 @@ class LoginStylerViewController: UIViewController {
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         // Do any additional setup after loading the view.
-    
-        // Remove before production
-        styleremailTextField.insertText("afern247@gmail.com")
-        stylerpasswordTextField.insertText("123456")
         
     }
 
