@@ -19,7 +19,7 @@ class LoginStylerViewController: UIViewController {
         
         
         super.viewDidLoad()
-        let topColor = UIColor(red: 162/255, green: 21/255, blue: 255/255, alpha: 1)
+        let topColor = UIColor(red: 162/255, green: 21/255, blue: 65/255, alpha: 1)
         let bottomColor = UIColor(red: 0/255, green: 194/255, blue: 189/255, alpha: 1)
         
         let gradientColors: [CGColor] = [topColor.cgColor, bottomColor.cgColor]
@@ -31,7 +31,6 @@ class LoginStylerViewController: UIViewController {
         
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
-        // Do any additional setup after loading the view.
         
     }
 
