@@ -130,12 +130,15 @@ extension PostServiceStylerViewController {
         metaData.contentType = "image/png"
         storageRef.putData(imgData!, metadata: metaData) { (metadata, error) in
             if error == nil {
-                print("success")
                 storageRef.downloadURL(completion: { (url, error) in
                     completion(url)
                 })
-            }else{
-                print("error in save image")
+                print("Success")
+            } else{
+                print("####################################################################")
+                print("Error in save image")
+                print("####################################################################")
+                print(error.debugDescription as Any)
                 completion(nil)
             }
         }
@@ -146,7 +149,7 @@ extension PostServiceStylerViewController {
         
         //Get sspecific document from current user
         let docRef = Firestore.firestore().collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
-
+        
         // Get data
         docRef.getDocuments { (querySnapshot, err) in
             
@@ -155,8 +158,12 @@ extension PostServiceStylerViewController {
                 print(err.localizedDescription)
                 return
             } else if querySnapshot!.documents.count != 1 {
-                print("More than one documents or none")
+                print("More than one documents or none: ")
+                print(querySnapshot!.documents.count)
+                print(querySnapshot!.documents.description)
             } else {
+                print(querySnapshot!.documents.count)
+                print(querySnapshot!.documents.description)
                 let document = querySnapshot!.documents.first
                 let dataDescription = document?.data()
                 let firstName = dataDescription?["firstname"] as! String
@@ -174,6 +181,10 @@ extension PostServiceStylerViewController {
                             "PostUrl": postURL.absoluteString]
                             as [String: Any]
                         self.ref.child("post").childByAutoId().setValue(dict)
+                
+                print("####################################################################")
+                print("Data UPLOADED!")
+                print("####################################################################")
                 
             }
         }        
