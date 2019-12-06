@@ -32,10 +32,7 @@ class LoginUserViewController: UIViewController {
         
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
-        // Do any additional setup after loading the view.
-        
-        emailTextField.insertText("afern247@gmail.com")
-        passwordTextField.insertText("123456")        
+       
     }
 
     @IBAction func loginButtonTapped(_ sender: Any) {
