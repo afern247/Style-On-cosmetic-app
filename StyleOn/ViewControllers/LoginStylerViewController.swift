@@ -33,8 +33,6 @@ class LoginStylerViewController: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
         // Remove before production
-        
-        // Styler: XIbRKL7cK9N6Y4N7lRaoBsw2R5A3
         styleremailTextField.insertText("afern247@gmail.com")
         stylerpasswordTextField.insertText("123456")
         

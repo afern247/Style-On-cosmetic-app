@@ -148,7 +148,7 @@ extension PostServiceStylerViewController {
     func saveImage(name: String, postURL:URL, completion: @escaping ((_ url: URL?) -> ())){
         
         //Get sspecific document from current user
-        let docRef = Firestore.firestore().collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
+        let docRef = Firestore.firestore().collection("usersBusiness").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
         
         // Get data
         docRef.getDocuments { (querySnapshot, err) in
@@ -166,7 +166,7 @@ extension PostServiceStylerViewController {
                 print(querySnapshot!.documents.description)
                 let document = querySnapshot!.documents.first
                 let dataDescription = document?.data()
-                let firstName = dataDescription?["firstname"] as! String
+                let firstName = dataDescription?["first_name"] as! String
 //                print("This is from DB directly " , dataDescription?["firstname"] as! String)
                 
                 

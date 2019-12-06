@@ -1433,7 +1433,6 @@
         <image name="user-clicked" width="170.5" height="170.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Usz-eA-eI3"/>
         <segue reference="lQm-RL-svk"/>
         <segue reference="8sy-ze-kUq"/>
         <segue reference="Jsb-nN-nPT"/>
