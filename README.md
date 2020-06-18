@@ -1,4 +1,4 @@
-## This was my graduation project
+## Stle-On
 
 Requirements:
 
