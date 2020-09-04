@@ -9,3 +9,7 @@ Requirements:
 [Database](https://console.firebase.google.com/u/1/project/styleon/overview)
 
 
+Screenshots:
+
+![](https://raw.githubusercontent.com/afern247/Style-On-cosmetic-app/master/temp/login%20page.jpeg)
+![](https://raw.githubusercontent.com/afern247/Style-On-cosmetic-app/master/temp/main%20page.png)
